@@ -1,7 +1,9 @@
 @extends('user.layouts.master')
 
-@section('title', 'Trang chủ')
+@section('title', 'Trang chủ thay đổi')
 
 @section('content')
-    Ok
+    {{-- Jumbotron --}}
+
+    {{-- /Jumbotron --}}
 @endsection

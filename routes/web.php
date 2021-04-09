@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('user.home');
 });
+
+Route::get('/dang-nhap', function () {
+    return view('user.login');
+});
