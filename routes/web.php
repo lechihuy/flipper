@@ -25,6 +25,18 @@ Route::get('/dang-ki', function() {
     return view('user.register');
 });
 
+Route::get('/ve-chung-toi', function() {
+    return view('user.about-us');
+});
+
+Route::get('/chinh-sach', function() {
+    return view('user.policy');
+});
+
+Route::get('/dieu-khoan-su-dung', function() {
+    return view('user.term-of-use');
+});
+
 Route::prefix('admin')->name('admin.')->namespace('Admin')->group(function() {
     Route::get('login', 'AuthController@showLoginForm');
 });
