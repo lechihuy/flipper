@@ -22,7 +22,7 @@
             và tất cả các thông tin mua sắm trên trang web Flipper của chúng tôi. 
             Bất kỳ tính năng mới nào được bổ sung hoặc mở rộng đối với dịch vụ đều 
             thuộc phạm vi điều chỉnh của điều Khoản dịch vụ này. 
-            Điều Khoản Dịch Vụ này điều chỉnh việc  bạn sử dụng dịch vụ cung cấp bởi Flipper.
+            Điều khoản dịch vụ này điều chỉnh việc bạn sử dụng dịch vụ cung cấp bởi Flipper.
             trở thành người sử dụng của trang Flipper bạn cần đọc và chấp nhận mọi điều khoản và điều kiện 
             được quy định trong, và dẫn chiếu đến, 
             điều khoản dịch vụ này và chính sách bảo mật được dẫn chiếu theo đây.
