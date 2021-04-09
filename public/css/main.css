@@ -80,3 +80,57 @@ footer .logo {
     width: 180px;
     border-radius: 20px;
 }
+
+.container__trending-item {
+    padding: 10px 0;
+} 
+.container__trending-item #trending__text {
+    margin-left: 40px;
+    font-size: 25px;
+}
+
+.container__trending-item .trending__logo {
+    height: 300px;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+.container__trending-item .trending__text-infor {
+    margin: 0;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.container__latest-item .latest__logo {
+    height: 300px;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+.container__latest-item #latest__text {
+    margin-left: 40px;
+    font-size: 25px;
+}
+
+.container__latest-item .latest__text-infor {
+    margin: 0;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+.container__sales-item .sales__logo {
+    height: 300px;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+.container__sales-item #sales__text {
+    margin-left: 40px;
+    font-size: 25px;
+}
+
+.container__sales-item .sales__text-infor {
+    margin: 0;
+    margin-left: 40px;
+    font-size: 20px;
+}
