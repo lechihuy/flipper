@@ -1,0 +1,14 @@
+
+
+.display-4{
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.lead{
+    font-weight: 500;
+}
+
+.btn{
+    border-radius: 25px;
+}
