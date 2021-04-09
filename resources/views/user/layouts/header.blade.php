@@ -2,8 +2,7 @@
 <nav id="header" class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid">
             <a class="navbar-brand order-1" href="#">
-                {{-- <img src="./img/1ffa0c0bbd344f6a1625.jpg" height="35px" alt=""> --}}
-                <img class="navbar-logo" src="{{ asset('images/flipper.jpg') }}">
+                <img class="navbar-logo" src="{{ asset('images/flipper-dark.png') }}">
             </a>
           
             <div class="order-2 order-lg-3 d-flex">
