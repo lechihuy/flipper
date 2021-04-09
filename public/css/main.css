@@ -1,3 +1,11 @@
+footer ul li {
+    text-decoration: none;
+    list-style: none;
+}
+
+footer .logo {
+    width: 200px;
+}
 
 
 .display-4{
