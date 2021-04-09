@@ -38,5 +38,10 @@ Route::get('/dieu-khoan-su-dung', function() {
 });
 
 Route::prefix('admin')->name('admin.')->namespace('Admin')->group(function() {
-    Route::get('login', 'AuthController@showLoginForm');
+    Route::view('', 'admin.dashboard')->name('dashboard')
+        ->middleware('auth:admin');
+
+    Route::get('login', 'AuthController@showLoginForm')->name('login');
+    Route::post('login', 'AuthController@login')->name('login.post');
+    Route::get('logout', 'AuthController@logout')->name('logout');
 });

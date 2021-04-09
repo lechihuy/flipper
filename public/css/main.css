@@ -20,6 +20,11 @@ footer .logo {
 .btn{
     border-radius: 25px;
 }
+#gt{
+    margin-top: 30px;
+}
+
+
 #header .navbar-logo {
     height: 35px;
 }
