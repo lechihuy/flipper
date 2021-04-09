@@ -6,3 +6,34 @@ footer ul li {
 footer .logo {
     width: 200px;
 }
+
+
+.display-4{
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.lead{
+    font-weight: 500;
+}
+
+.btn{
+    border-radius: 25px;
+}
+#header .navbar-logo {
+    height: 35px;
+}
+
+#header .search-input {
+    border-radius: 50px;
+}
+
+#header .nav-icon {
+    margin-left: 20px;
+    color: #000;
+}
+
+#menu .nav-list-item {
+    margin-left: 80px;
+}
+
