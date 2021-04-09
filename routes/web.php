@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('user.home');
 });
 
-Route::get('/dang-nhap', function () {
+Route::get('/dang-nhap', function() {
     return view('user.login');
+});
+
+Route::get('/dang-ki', function() {
+    return view('user.register');
+});
+
+Route::prefix('admin')->name('admin.')->namespace('Admin')->group(function() {
+    Route::get('login', 'AuthController@showLoginForm');
 });
