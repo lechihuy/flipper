@@ -6,9 +6,9 @@
                 <img class="navbar-logo" src="{{ asset('images/flipper.jpg') }}">
             </a>
           
-            <div id="navbar-box-icon" class="order-2 order-lg-3 d-flex">
+            <div class="order-2 order-lg-3 d-flex">
                 <form class="d-flex me-3">
-                    <input id="icon-search" class="nav-icon form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search">
                 </form>
                 <a href=""  class="navbar-icon d-inline-block p-2">
                     <i class="nav-icon fas fa-shopping-cart"></i>
@@ -16,12 +16,12 @@
                 <a href="" class="navbar-icon d-inline-block p-2">
                     <i class="nav-icon fas fa-user"></i>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler ml-3" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
           
-            <div id='nav-list' class="collapse navbar-collapse flex-grow-0 order-3 order-lg-2" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse flex-grow-0 order-3 order-lg-2" id="menu">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-list-item nav-item">
                         <a class="nav-link" href="#">MEN</a>

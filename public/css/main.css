@@ -1,17 +1,16 @@
-#header .navbar-logo{
+#header .navbar-logo {
     height: 35px;
 }
 
-#navbar-box-icon #icon-search {
+#header .search-input {
     border-radius: 50px;
-
 }
 
-#navbar-box-icon .nav-icon {
+#header .nav-icon {
     margin-left: 20px;
 }
 
-#nav-list .nav-list-item {
+#menu .nav-list-item {
     margin-left: 80px;
 }
 
