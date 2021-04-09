@@ -39,7 +39,7 @@ footer .logo {
 
 .form__login {
     width: 350px !important;
-    margin-top: 80px;
+    padding: 80px 0;
 }
 
 .form__login .login-tab ul {
@@ -56,16 +56,27 @@ footer .logo {
 }
 
 .form__login #text-codition {
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 200;
 }
 
 .form__login #form-check-text {
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
 }
 
 .form__login .form__login-btn {
-    width: 300px;
+    width: 350px;
     border-radius: 50px;
 } 
+
+.form__login #form__login-forget {
+    padding-top: 20px;
+    border-bottom: 1px solid #000;
+}
+
+.form__login #form__login-btn-create {
+    margin-top: 20px;
+    width: 180px;
+    border-radius: 20px;
+}
