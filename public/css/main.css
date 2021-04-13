@@ -7,23 +7,21 @@ footer .logo {
     width: 200px;
 }
 
-
-.display-4{
+.display-4 {
     font-weight: bold;
     margin-bottom: 40px;
 }
 
-.lead{
+.lead {
     font-weight: 500;
 }
 
-.btn{
+.btn {
     border-radius: 25px;
 }
-#gt{
+#gt {
     margin-top: 30px;
 }
-
 
 #header .navbar-logo {
     height: 35px;
@@ -46,13 +44,12 @@ footer .logo {
     width: 350px !important;
 }
 
-
 .form__tab {
     margin-bottom: 10px;
 }
 
 .form__login .form__tab-item .form_tab-item-active {
-    border-width: 3px !important; 
+    border-width: 3px !important;
 }
 
 .form__login #text-codition {
@@ -68,7 +65,7 @@ footer .logo {
 .form__login .form__login-btn {
     width: 350px;
     border-radius: 50px;
-} 
+}
 
 .form__login #form__login-forget {
     padding-top: 20px;
@@ -79,4 +76,12 @@ footer .logo {
     margin-top: 20px;
     width: 180px;
     border-radius: 20px;
+}
+
+/* DETAIL CSS */
+a {
+    color: black;
+}
+
+.nut button {
 }
