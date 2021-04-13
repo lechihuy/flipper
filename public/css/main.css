@@ -36,12 +36,9 @@ footer .logo {
     color: #000;
 }
 
-#menu .nav-list-item {
-    margin-left: 80px;
-}
-
 .form__login {
     width: 350px !important;
+    max-width: calc(100% - 30px);
 }
 
 .form__tab {
@@ -63,18 +60,16 @@ footer .logo {
 }
 
 .form__login .form__login-btn {
-    width: 350px;
     border-radius: 50px;
 }
 
 .form__login #form__login-forget {
-    padding-top: 20px;
-    border-bottom: 1px solid #000;
+    padding: 20px 0;
 }
 
 .form__login #form__login-btn-create {
     margin-top: 20px;
-    width: 180px;
+
     border-radius: 20px;
 }
 

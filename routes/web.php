@@ -15,19 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('user.home');
-});
+})->name('home');
 
 Route::get('/dang-nhap', function() {
     return view('user.login');
-});
+})->name('login');
 
 Route::get('/dang-ki', function() {
     return view('user.register');
-});
+})->name('register');
 
 Route::get('/gio-hang', function() {
     return view('user.cart');
-});
+})->name('cart');
 
 Route::get('/chi-tiet-san-pham', function() {
     return view('user.product-detail');
@@ -45,6 +45,10 @@ Route::get('/dieu-khoan-su-dung', function() {
     return view('user.term-of-use');
 });
 
+Route::get('/danh-sach-san-pham', function() {
+    return view('user.product-list');
+});
+
 Route::prefix('admin')->name('admin.')->namespace('Admin')->group(function() {
     Route::view('', 'admin.dashboard')->name('dashboard')
         ->middleware('auth:admin');
@@ -54,4 +58,5 @@ Route::prefix('admin')->name('admin.')->namespace('Admin')->group(function() {
     Route::get('logout', 'AuthController@logout')->name('logout');
 
     Route::resource('categories', 'CategoryController');
+    Route::resource('products', 'ProductController');
 });

@@ -2,7 +2,6 @@
 
 @section('title', 'Về chúng tôi')
 
-
 @section('content')
 <div class="container py-5">
     <h2>NHỮNG BƯỚC CHÂN KHÔNG MỎI</h2>
