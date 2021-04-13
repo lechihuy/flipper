@@ -23,16 +23,50 @@
 
 {{-- Best Seller  --}}
 <section>
-    <div class="container">
+    <div class="container py-5">
         <div class="row">
-            <div class="col">
+            <div class="col-3">
+                <div class="mb-5">
+                    <h5>Danh mục sản phẩm</h5>
+                    <p class="ml-3">
+                        <a class="text-dark" href="">Men</a>
+                    </p>
+                    <p class="ml-3">
+                        <a class="text-dark" href="">Women</a>
+                    </p>
+                    <p class="ml-3">
+                        <a class="text-dark" href="">Kid</a>
+                    </p>
+                    <p class="ml-3">
+                        <a class="text-dark" href="">Customise</a>
+                    </p>
+                    <p class="ml-3">
+                        <a class="text-dark" href="">Sales</a>
+                    </p>    
+                    
+                </div>
+                <div>
+                    <h5>Chọn giá mức</h5>
+                    <p class="ml-3">
+                        <a class="text-dark" href="">Dưới 500 ngàn</a>
+                    </p>
+                    <p class="ml-3">
+                        <a class="text-dark" href="">Từ 500 - 2 triệu</a>
+                    </p>
+                    <p class="ml-3">
+                        <a class="text-dark" href="">Từ 2 - 4 triệu</a>
+                    </p>
+                    <p class="ml-3">
+                        <a class="text-dark" href="">trên 4 triệu</a>
+                    </p>
+
+                </div>
             </div>
-            <div class="col">
-                 <div class="container py-5 list-product">
-                    <h1 class='text-left mb-3'>BÁN CHẠY</h1>
+            <div class="col-9">
+                 <div class="container list-product">
                     <div class="row">
-                        @for($i = 0; $i < 4; $i++)
-                            <div class="col-3">
+                        @for($i = 0; $i < 6; $i++)
+                            <div class="col-4 mb-3">
                                 <img class="w-100 rounded" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
                                 <h5 class='mt-2 font-weight-bold'>Nike AF1 mắc nhất thế giới limited</h5>
                                 <p class='mb-0 font-weight-bold text-danger'>1.200.000</p>
