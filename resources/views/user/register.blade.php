@@ -26,6 +26,6 @@
             <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Mật khẩu ...">
         </div>
 
-        <button type="submit" class=" form__login-btn btn btn-primary d-block mx-auto">Đăng ký</button>
+        <button type="submit" class=" form__login-btn btn btn-primary btn-block mx-auto">Đăng ký</button>
     </form>
 @endsection

@@ -39,11 +39,12 @@ footer .logo {
 }
 
 #menu .nav-list-item {
-    margin-left: 80px;
+    
 }
 
 .form__login {
     width: 350px !important;
+    max-width: calc(100% - 30px);
 }
 
 
@@ -66,7 +67,6 @@ footer .logo {
 }
 
 .form__login .form__login-btn {
-    width: 350px;
     border-radius: 50px;
 } 
 
@@ -76,6 +76,5 @@ footer .logo {
 
 .form__login #form__login-btn-create {
     margin-top: 20px;
-    width: 180px;
     border-radius: 20px;
 }
