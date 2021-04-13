@@ -5,12 +5,12 @@
     <div class="container py-5">
         <div class = "row">
             <div class="col-sm-12 col-md-4">
-                
+    
                     <img src="{{ asset('images/flipper-light.png') }}" class="logo">
                 
 
             </div>
-
+            <div></div>
 
             <div class = "col-sm-12 col-md-4">
                 <ul class = "footer-links">
