@@ -3,13 +3,13 @@
 @section('title', 'Đăng nhập')
 
 @section('content')
-    <form class="form__login mx-auto" class="p-4">
+    <form class="py-5 form__login mx-auto" class="p-4">
         <div class="form__tab row">
             <div class="form__tab-item col-6 text-center">
-            <a class=" nav-link d-block" href="#">Đăng ký</a>
+            <a class="nav-link d-block text-dark" href="#">Đăng ký</a>
             </div>
             <div class="form__tab-item col-6 text-center">
-            <a class="form_tab-item-active nav-link d-block" href="#">Đăng nhập</a>
+            <a class="border-primary border-bottom form_tab-item-active nav-link d-block" href="#">Đăng nhập</a>
             </div>
         </div>
 
@@ -28,9 +28,9 @@
                 </label>
             </div>
         </div>
-        <button type="submit" class=" form__login-btn btn btn-primary d-block mx-auto btn btn-dark">Đăng nhập</button>
-        <div id='form__login-forget' class='text-center'>Quên mật khẩu?</div>
-        <button id='form__login-btn-create' type="submit" class=" form__login-btn btn btn-primary d-block mx-auto btn btn-dark">Tạo tài khoản mới</button>
+        <button type="submit" class=" form__login-btn btn btn-primary btn-block mx-auto btn">Đăng nhập</button>
+        <div id='form__login-forget' class='border-light border-bottom text-center'>Quên mật khẩu?</div>
+        <button id='form__login-btn-create' type="submit" class=" form__login-btn btn btn-light btn-block mx-auto">Tạo tài khoản mới</button>
         
     </form>
 @endsection

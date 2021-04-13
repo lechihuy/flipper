@@ -40,25 +40,21 @@ footer .logo {
 }
 
 #menu .nav-list-item {
-    margin-left: 80px;
+    
 }
 
 .form__login {
     width: 350px !important;
-    padding: 80px 0;
+    max-width: calc(100% - 30px);
 }
 
-.form__login .login-tab ul {
-    border-bottom: 1px solid #000;
-    width: 200px;
-}
 
 .form__tab {
     margin-bottom: 10px;
 }
 
 .form__login .form__tab-item .form_tab-item-active {
-    border-bottom: 3px solid #000;
+    border-width: 3px !important; 
 }
 
 .form__login #text-codition {
@@ -72,46 +68,14 @@ footer .logo {
 }
 
 .form__login .form__login-btn {
-    width: 350px;
     border-radius: 50px;
 } 
 
 .form__login #form__login-forget {
-    padding-top: 20px;
-    border-bottom: 1px solid #000;
+    padding: 20px 0;
 }
 
 .form__login #form__login-btn-create {
     margin-top: 20px;
-    width: 180px;
     border-radius: 20px;
 }
-
-
-/* .list-product .trending__text-infor {
-    margin: 0;
-    margin-left: 40px;
-    font-size: 20px;
-}
-
-.list-product #latest__text {
-    margin-left: 40px;
-    font-size: 25px;
-}
-
-.list-product .latest__text-infor {
-    margin: 0;
-    margin-left: 40px;
-    font-size: 20px;
-} */
-
-/* .list-product #sales__text {
-    margin-left: 40px;
-    font-size: 35px;
-}
-
-.container__sales-item .sales__text-infor {
-    margin: 0;
-    margin-left: 40px;
-    font-size: 20px;
-} */
