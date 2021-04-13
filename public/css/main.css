@@ -44,20 +44,15 @@ footer .logo {
 
 .form__login {
     width: 350px !important;
-    padding: 80px 0;
 }
 
-.form__login .login-tab ul {
-    border-bottom: 1px solid #000;
-    width: 200px;
-}
 
 .form__tab {
     margin-bottom: 10px;
 }
 
 .form__login .form__tab-item .form_tab-item-active {
-    border-bottom: 3px solid #000;
+    border-width: 3px !important; 
 }
 
 .form__login #text-codition {
@@ -85,34 +80,3 @@ footer .logo {
     width: 180px;
     border-radius: 20px;
 }
-
-
-/* .list-product .trending__text-infor {
-    margin: 0;
-    margin-left: 40px;
-    font-size: 20px;
-}
-
-.list-product #latest__text {
-    margin-left: 40px;
-    font-size: 25px;
-}
-
-.list-product .latest__text-infor {
-    margin: 0;
-    margin-left: 40px;
-    font-size: 20px;
-} */
-
-/* .list-product #sales__text {
-    margin-left: 40px;
-    font-size: 35px;
-}
-
-.container__sales-item .sales__text-infor {
-    margin: 0;
-    margin-left: 40px;
-    font-size: 20px;
-} */
-
-/*  */

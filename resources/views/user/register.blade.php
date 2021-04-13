@@ -3,10 +3,10 @@
 @section('title', 'Đăng ký')
 
 @section('content')
-    <form class="form__login mx-auto" class="p-4">
+    <form class="py-5 form__login mx-auto" class="p-4">
         <div class="form__tab row">
-            <div class="form__tab-item col-6 text-center">
-            <a class="form_tab-item-active nav-link d-block" href="#">Đăng ký</a>
+            <div class=" form__tab-item col-6 text-center">
+            <a class=" border-primary border-bottom form_tab-item-active nav-link d-block" href="#">Đăng ký</a>
             </div>
             <div class="form__tab-item col-6 text-center">
             <a class="nav-link d-block" href="#">Đăng nhập</a>
@@ -27,15 +27,6 @@
         </div>
 
         <p id="text-codition">Ít nhất 8 ký tự 1 chữ hoa, 1 số & 1 ký hiệu</p>
-
-        <div class="form-group">
-            <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-                <label id="form-check-text" class="form-check-label" for="dropdownCheck2">
-                    Khi đăng nhập, Bạn sẽ phải đồng ý <b> Điều khoản dịch vụ </b> và <b> chính sách quyền riêng tư của cty </b> 
-                </label>
-            </div>
-        </div>
         <button type="submit" class=" form__login-btn btn btn-primary d-block mx-auto btn btn-dark">Đăng ký</button>
     </form>
 @endsection
