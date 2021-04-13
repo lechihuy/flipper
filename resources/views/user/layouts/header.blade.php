@@ -44,3 +44,7 @@
             </div>
         </div>
 </nav>
+
+<div class="bg-dark text-white text-center p-2">
+    Hãy trở thành thành viên của Flipper để có thể tiến hành đặt hàng, đăng ký ngay <a class='text-white-50' href="{{ route('register') }}"><ins>tại đây</ins> </a>
+</div>
