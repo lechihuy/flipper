@@ -86,56 +86,40 @@ footer .logo {
     border-radius: 20px;
 }
 
-.container__trending-item {
+.list-product {
     padding: 10px 0;
 } 
-.container__trending-item #trending__text {
-    margin-left: 40px;
-    font-size: 25px;
-}
 
-.container__trending-item .trending__logo {
+.list-product .image-item {
     height: 300px;
     border-radius: 20px;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
-.container__trending-item .trending__text-infor {
+/* .list-product .trending__text-infor {
     margin: 0;
     margin-left: 40px;
     font-size: 20px;
 }
 
-.container__latest-item .latest__logo {
-    height: 300px;
-    border-radius: 20px;
-    margin-left: 30px;
-}
-
-.container__latest-item #latest__text {
+.list-product #latest__text {
     margin-left: 40px;
     font-size: 25px;
 }
 
-.container__latest-item .latest__text-infor {
+.list-product .latest__text-infor {
     margin: 0;
     margin-left: 40px;
     font-size: 20px;
-}
+} */
 
-.container__sales-item .sales__logo {
-    height: 300px;
-    border-radius: 20px;
-    margin-left: 30px;
-}
-
-.container__sales-item #sales__text {
+/* .list-product #sales__text {
     margin-left: 40px;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .container__sales-item .sales__text-infor {
     margin: 0;
     margin-left: 40px;
     font-size: 20px;
-}
+} */

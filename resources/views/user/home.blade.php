@@ -22,44 +22,43 @@
     {{-- /Jumbotron --}}
 
 {{-- Best Seller  --}}
-<div class="container__trending-item bg-light">
-    <p id="trending__text" class='font-weight-bold text-left'>BEST SELLER</p>
+<div class="container-fluid list-product bg-light">
+    <h3 class='display-4 text-left'>BEST SELLER</h3>
     <div class="row">
         <div class="col-3">
-            <img class="trending__logo" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
-            <p class='trending__text-infor font-weight-bold'>Nike AF1</p>
-            <p class='trending__text-infor font-weight-bold text-danger'>1.200.000</p>
-            <p class='trending__text-infor text-muted'>
+            <img class="image-item" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
+            <p class='text-infor font-weight-bold'>Nike AF1</p>
+            <p class='text-infor font-weight-bold text-danger'>1.200.000</p>
+            <p class='text-infor text-muted'>
             <del>2.929.000đ</del>
             </p>
             
         </div>
         <div class="col-3">
-            <img class="trending__logo" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
-            <p class='trending__text-infor font-weight-bold'>Nike AF1</p>
-            <p class='trending__text-infor font-weight-bold text-danger'>1.200.000</p>
-            <p class='trending__text-infor text-muted '>
+            <img class="image-item" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
+            <p class='text-infor font-weight-bold'>Nike AF1</p>
+            <p class='text-infor font-weight-bold text-danger'>1.200.000</p>
+            <p class='text-infor text-muted '>
             <del>2.929.000đ</del>
             </p>
             
         </div>
         <div class="col-3">
-            <img class="trending__logo" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
-            <p class='trending__text-infor font-weight-bold'>Nike AF1</p>
-            <p class='trending__text-infor font-weight-bold text-danger'>1.200.000</p>
-            <p class='trending__text-infor text-muted'>
+            <img class="image-item" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
+            <p class='text-infor font-weight-bold'>Nike AF1</p>
+            <p class='text-infor font-weight-bold text-danger'>1.200.000</p>
+            <p class='text-infor text-muted'>
             <del>2.929.000đ</del>
             </p>
            
         </div>
         <div class="col-3">
-            <img class="trending__logo" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
-            <p class='trending__text-infor font-weight-bold'>Nike AF1</p>
-            <p class='trending__text-infor font-weight-bold text-danger'>1.200.000</p>
-            <p class='trending__text-infor text-muted'>
+            <img class="image-item" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
+            <p class='text-infor font-weight-bold'>Nike AF1</p>
+            <p class='text-infor font-weight-bold text-danger'>1.200.000</p>
+            <p class='text-infor text-muted'>
             <del>2.929.000đ</del>
             </p>
-            >
         </div>
     </div>
 </div>
@@ -68,11 +67,11 @@
 {{-- Best Seller  --}}
 
 {{-- New Release --}}
-<div class="container__latest-item bg-white">
-    <p id="latest__text" class='font-weight-bold text-left'>BEST SELLER</p>
+{{-- <div class="container-fluid list-product bg-white">
+    <h2 class=' text-left'>BEST SELLER</h2>
     <div class="row">
         <div class="col-3">
-            <img class="latest__logo" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
+            <img class="image-item" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
             <p class='latest__text-infor font-weight-bold'>Nike AF1</p>
             <p class='latest__text-infor font-weight-bold text-danger'>1.200.000</p>
             <p class='latest__text-infor text-muted'>
@@ -81,7 +80,7 @@
             
         </div>
         <div class="col-3">
-            <img class="latest__logo" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
+            <img class="image-item" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
             <p class='latest__text-infor font-weight-bold'>Nike AF1</p>
             <p class='latest__text-infor font-weight-bold text-danger'>1.200.000</p>
             <p class='latest__text-infor text-muted '>
@@ -90,7 +89,7 @@
             
         </div>
         <div class="col-3">
-            <img class="latest__logo" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
+            <img class="image-item" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
             <p class='latest__text-infor font-weight-bold'>Nike AF1</p>
             <p class='latest__text-infor font-weight-bold text-danger'>1.200.000</p>
             <p class='latest__text-infor text-muted'>
@@ -99,24 +98,23 @@
            
         </div>
         <div class="col-3">
-            <img class="latest__logo" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
+            <img class="image-item" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
             <p class='latest__text-infor font-weight-bold'>Nike AF1</p>
             <p class='latest__text-infor font-weight-bold text-danger'>1.200.000</p>
             <p class='latest__text-infor text-muted'>
             <del>2.929.000đ</del>
             </p>
-            >
         </div>
     </div>
-</div>
+</div> --}}
 {{-- New Release --}}
 
 {{-- Sales --}}
-<div class="container__sales-item bg-white">
-    <p id="sales__text" class='font-weight-bold text-left'>BEST SELLER</p>
+{{-- <div class="container-fluid list-product bg-white">
+    <p class='font-weight-bold text-left'>BEST SELLER</p>
     <div class="row">
         <div class="col-3">
-            <img class="sales__logo" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
+            <img class="image-item" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
             <p class='sales__text-infor font-weight-bold'>Nike AF1</p>
             <p class='sales__text-infor font-weight-bold text-danger'>1.200.000</p>
             <p class='sales__text-infor text-muted'>
@@ -125,7 +123,7 @@
             
         </div>
         <div class="col-3">
-            <img class="sales__logo" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
+            <img class="image-item" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
             <p class='sales__text-infor font-weight-bold'>Nike AF1</p>
             <p class='sales__text-infor font-weight-bold text-danger'>1.200.000</p>
             <p class='sales__text-infor text-muted '>
@@ -134,7 +132,7 @@
             
         </div>
         <div class="col-3">
-            <img class="sales__logo" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
+            <img class="image-item" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
             <p class='sales__text-infor font-weight-bold'>Nike AF1</p>
             <p class='sales__text-infor font-weight-bold text-danger'>1.200.000</p>
             <p class='sales__text-infor text-muted'>
@@ -143,16 +141,15 @@
            
         </div>
         <div class="col-3">
-            <img class="sales__logo" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
+            <img class="image-item" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
             <p class='sales__text-infor font-weight-bold'>Nike AF1</p>
             <p class='sales__text-infor font-weight-bold text-danger'>1.200.000</p>
             <p class='sales__text-infor text-muted'>
             <del>2.929.000đ</del>
             </p>
-            >
         </div>
     </div>
-</div>
+</div> --}}
 
 {{-- Sales --}}
 @endsection
