@@ -45,6 +45,10 @@ Route::get('/dieu-khoan-su-dung', function() {
     return view('user.term-of-use');
 });
 
+Route::get('/danh-sach-san-pham', function() {
+    return view('user.product-list');
+});
+
 Route::prefix('admin')->name('admin.')->namespace('Admin')->group(function() {
     Route::view('', 'admin.dashboard')->name('dashboard')
         ->middleware('auth:admin');
