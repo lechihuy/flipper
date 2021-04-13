@@ -6,10 +6,10 @@
     <form class="py-5 form__login mx-auto" class="p-4">
         <div class="form__tab row">
             <div class=" form__tab-item col-6 text-center">
-            <a class=" border-primary text-primary border-bottom form_tab-item-active nav-link d-block" href="#">Đăng ký</a>
+                <a class=" border-primary text-primary border-bottom form_tab-item-active nav-link d-block" href="#">Đăng ký</a>
             </div>
             <div class="form__tab-item col-6 text-center">
-            <a class="nav-link d-block text-dark" href="#">Đăng nhập</a>
+                <a class="nav-link d-block text-dark" href="{{ route('login') }}">Đăng nhập</a>
             </div>
         </div>
 
