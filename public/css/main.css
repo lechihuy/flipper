@@ -86,15 +86,6 @@ footer .logo {
     border-radius: 20px;
 }
 
-.list-product {
-    padding: 10px 0;
-} 
-
-.list-product .image-item {
-    height: 300px;
-    border-radius: 20px;
-    margin-left: 20px;
-}
 
 /* .list-product .trending__text-infor {
     margin: 0;
