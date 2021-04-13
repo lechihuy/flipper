@@ -7,7 +7,7 @@
 <div class="container py-5">
     <h2>NHỮNG BƯỚC CHÂN KHÔNG MỎI</h2>
     <p>
-    Từ một cơ sở sản xuất nhỏ khởi nghiệp từ năm 2020 
+    Từ một cơ sở sản xuất nhỏ khởi nghiệp từ năm 2020 ``
     chỉ với 6 thành viên nhưng có sự quyết tâm cao độ, 
     ý chí và luôn tự khiêm tốn để cải cách tiến lên, 
     Flipper đã trải qua nhiều khó khăn để khẳng định vị trí của mình.
