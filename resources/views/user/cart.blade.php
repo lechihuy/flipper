@@ -32,7 +32,21 @@
                 
                 <div class="align-self-start ml-auto">
                     100$
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary rounded-0 " type="button">-</button>
+                        </div>
+
+                        <div class="input-group-append ">
+                            <span class="input-group-text" id="">1</span>
+                        </div>
+
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary rounded-0" type="button">+</button>
+                        </div>
+                    </div>
                 </div>
+
             </div>
             
             
@@ -47,15 +61,34 @@
 
                 <div class="align-self-start ml-3">
                     <a href="#">Nike Wildhorse 7 </a>
+                    <div class="mt-2">
+                        <label>Size: 43</label>
+                    </div>
                 </div>
                 
                 <div class="align-self-start ml-auto">
                     100$
                 </div>
+                <div class="align-self-start ml-auto">
+                    100$
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary rounded-0 " type="button">-</button>
+                        </div>
+
+                        <div class="input-group-append ">
+                            <span class="input-group-text" id="">1</span>
+                        </div>
+
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary rounded-0" type="button">+</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-4">
-            <div class="d-flex flex-row mb-3">
+            <div class="d-flex flex-row mb-3 mt-2">
                 <div class="align-self-start">
                     Tạm tính
                 </div>
@@ -75,8 +108,22 @@
                 </div>
             </div>
 
-            <div class="d-flex flex-row">
+            <div class="pb-2 border-bottom d-flex flex-row">
                Thuế VAT đã bao gồm trong giá sản phẩm
+            </div>
+
+             <div class="pb-2 border-bottom d-flex flex-row mt-2">
+                <div class="align-self-start">
+                    Tổng đơn
+                </div>
+
+                <div class="align-self-start ml-auto">
+                    100$
+                </div>
+            </div>
+            
+            <div class="d-flex flex-row mb-3 mt-3">
+                <a type="button" class="btn btn-dark ml-auto ">Thanh toán</a>
             </div>
 
         </div>
