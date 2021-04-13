@@ -25,6 +25,14 @@ Route::get('/dang-ki', function() {
     return view('user.register');
 });
 
+Route::get('/gio-hang', function() {
+    return view('user.cart');
+});
+
+Route::get('/chi-tiet-san-pham', function() {
+    return view('user.product-detail');
+});
+
 Route::get('/ve-chung-toi', function() {
     return view('user.about-us');
 });
@@ -44,4 +52,6 @@ Route::prefix('admin')->name('admin.')->namespace('Admin')->group(function() {
     Route::get('login', 'AuthController@showLoginForm')->name('login');
     Route::post('login', 'AuthController@login')->name('login.post');
     Route::get('logout', 'AuthController@logout')->name('logout');
+
+    Route::resource('categories', 'CategoryController');
 });
