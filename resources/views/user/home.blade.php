@@ -9,11 +9,11 @@
 
 {{-- Best Seller  --}}
 <section>
-    <div class="container py-5 list-product">
+    <div class="container-fluid container-lg py-5 list-product">
         <h2 class='text-left mb-3 font-weight-light'>BÁN CHẠY</h2>
         <div class="row">
         @for($i = 0; $i < 4; $i++)
-            <div class="col-6 col-md-3">
+            <div class="col-6 col-md-3 mb-3">
                 <img class="w-100 rounded" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
                 <h5 class='mt-2 font-weight-bold'>Nike AF1 mắc nhất thế giới limited</h5>
                 <p class='mb-0 font-weight-bold text-danger'>1.200.000</p>
@@ -28,11 +28,11 @@
 
 {{-- New Release --}}
 <section class='bg-light'>
-    <div class="container py-5 list-product ">
+    <div class="container-fluid container-lg py-5 list-product ">
         <h2 class='text-left mb-3 font-weight-light'>MỚI NHẤT</h2>
         <div class="row">
-        @for($i = 0; $i < 4; $i++)
-            <div class="col-6 col-md-3">
+        @for($i = 0; $i < 8; $i++)
+            <div class="col-6 col-md-3 mb-3">
                 <img class="w-100 rounded" src="{{ asset('https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4cdd870b-e576-4371-a21c-5295f7c6d222/air-max-97-se-shoe-tWNMCG.png') }}">
                 <h5 class='mt-2 font-weight-bold'>Nike AF1 mắc nhất thế giới limited</h5>
                 <p class='mb-0 font-weight-bold text-danger'>1.200.000</p>
@@ -44,7 +44,5 @@
     </div>
 </div>
 </section>
-
-
 
 @endsection
