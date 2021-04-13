@@ -4,9 +4,9 @@
 
 
 @section('content')
-<div class="container py-5">
+<div class="container-fluid container-lg py-5">
     <div class="row">
-        <div class="col-12 col-md-8 mb-5">
+        <div class="col-12 col-md-8 mb-5 pr-3 pr-md-5">
             <h4>Giỏ hàng</h4>
             <div class="d-flex flex-row">
                 <div class="align-items-start mb-3">
@@ -18,7 +18,7 @@
                 <div class="align-self-start ml-3">
                     <a href="#">Nike Wildhorse 7 </a>
                     <div class="mt-2">
-                        <label class="badge badge-secondary">Size: 43</label>
+                        <label>Size: 43</label>
                     </div>
                 </div>
                 
