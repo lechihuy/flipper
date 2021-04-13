@@ -1,5 +1,5 @@
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
+    <div class="container-fluid container-lg">
         <div class="row">
             <div class="col-12 col-md-6">
                 <h1 class="display-4">Flipper</h1>
