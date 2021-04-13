@@ -39,10 +39,6 @@ footer .logo {
     color: #000;
 }
 
-#menu .nav-list-item {
-    
-}
-
 .form__login {
     width: 350px !important;
     max-width: calc(100% - 30px);
