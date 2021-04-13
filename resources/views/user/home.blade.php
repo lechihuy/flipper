@@ -24,7 +24,7 @@
 {{-- Best Seller  --}}
 <section>
     <div class="container py-5 list-product">
-        <h1 class='text-left mb-3'><i class="fas fa-fire text-danger"></i> BÁN CHẠY</h1>
+        <h1 class='text-left mb-3'>BÁN CHẠY</h1>
         <div class="row">
         @for($i = 0; $i < 4; $i++)
             <div class="col-3">
