@@ -20,7 +20,7 @@
                     <div class="mt-2">
                         <label>Size: 43</label>
                     </div>
-                <a type="button" class="btn rounded pb-1 border-bottom text-muted">Xóa</a>    
+                    <button type="button" class="btn btn-light">Xóa</button>    
                 </div>
                 
                 <div class="align-self-start ml-auto">
@@ -55,7 +55,7 @@
                     <div class="mt-2">
                         <label class="badge badge-secondary">Size: 43</label>
                     </div>
-                     <a type="button" class="btn rounded pb-1 border-bottom text-muted">Xóa</a>
+                    <button type="button" class="btn btn-light">Xóa</button>     
                 </div>
                 
                

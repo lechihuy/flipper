@@ -9,14 +9,12 @@
                 @include('admin.layouts.sidebar')
             </div>
             <div class="col-12 col-lg-9">
-                <h1 class="mb-4">Danh sách danh mục</h1>
-                <div>
-                    <a href="{{ route('admin.categories.create') }}" class="btn btn-primary float-right">Tạo</a>
-                    <div class="clearfix"></div>
-                </div>
+                <h1 class="mb-4">Danh sách danh mục
+                    <a href="{{ route('admin.categories.create') }}" class="btn btn-primary float-right mt-2"><i class="fas fa-plus"></i> Tạo</a>
+                </h1>
                 @if (count($categories) > 0)
                     <div class="table-responsive mt-3">
-                        <table class="table">
+                        <table class="table table-striped">
                             <thead class="thead-dark">
                                 <tr>
                                     <th scope="col">#</th>
@@ -40,12 +38,12 @@
                                                 <p class="text-muted">Không</p>
                                             @endif
                                         </td>
-                                        <td>
+                                        <td class="text-right">
                                             <a href="{{ route('admin.categories.edit', $category) }}" class="btn btn-light btn-sm"><i class="fas fa-edit"></i> Sửa</a>
                                             <form action="{{ route('admin.categories.destroy', $category) }}" class="d-inline-block" method="POST">
                                                 @method('DELETE')
                                                 @csrf
-                                                <button class="btn btn-danger btn-sm" type="submit"><i class="fas fa-trash"></i> Xóa</button>
+                                                <button class="btn btn-link text-danger btn-sm" type="submit"><i class="fas fa-trash"></i> Xóa</button>
                                             </form>
                                         </td>
                                     </tr>

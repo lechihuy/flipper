@@ -13,41 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('user.home');
-})->name('home');
+Route::get('/', 'RenderController@showHomePage')->name('home');
+Route::get('/dang-nhap', 'RenderController@showLoginPage')->name('login');
+Route::get('/dang-ki', 'RenderController@showRegisterPage')->name('register');
+Route::get('/gio-hang', 'RenderController@showCartPage')->name('cart');
+Route::get('/chi-tiet-san-pham', 'RenderController@showProductDetailPage')->name('product_detail');
+Route::get('/danh-sach-san-pham', 'RenderController@showProductListPage')->name('term_of_use');
+Route::get('/ve-chung-toi', 'RenderController@showAboutUsPage')->name('about_us');
+Route::get('/chinh-sach', 'RenderController@showPolicyPage')->name('policy');
+Route::get('/dieu-khoan-su-dung', 'RenderController@showTermOfUsePage')->name('term_of_use');
+Route::get('/tim-kiem', 'RenderController@showSearchPage')->name('search');
+Route::get('/ho-so', 'RenderController@showProfilePage')->name('profile');
+Route::get('/don-hang', 'RenderController@showOrderPage')->name('order');
+Route::get('/quen-mat-khau', 'RenderController@showForgotPasswordPage')->name('forgot_password');
+Route::get('/khoi-phuc-mat-khau', 'RenderController@showResetPasswordPage')->name('reset_password');
 
-Route::get('/dang-nhap', function() {
-    return view('user.login');
-})->name('login');
-
-Route::get('/dang-ki', function() {
-    return view('user.register');
-})->name('register');
-
-Route::get('/gio-hang', function() {
-    return view('user.cart');
-})->name('cart');
-
-Route::get('/chi-tiet-san-pham', function() {
-    return view('user.product-detail');
-});
-
-Route::get('/ve-chung-toi', function() {
-    return view('user.about-us');
-});
-
-Route::get('/chinh-sach', function() {
-    return view('user.policy');
-});
-
-Route::get('/dieu-khoan-su-dung', function() {
-    return view('user.term-of-use');
-});
-
-Route::get('/danh-sach-san-pham', function() {
-    return view('user.product-list');
-});
 
 Route::prefix('admin')->name('admin.')->namespace('Admin')->group(function() {
     Route::view('', 'admin.dashboard')->name('dashboard')

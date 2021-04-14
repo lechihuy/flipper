@@ -13,7 +13,7 @@ class CreateCategoryRequest extends FormRequest
      */
     public function authorize()
     {
-        return true;
+        return auth('admin')->check();
     }
 
     /**
@@ -32,7 +32,6 @@ class CreateCategoryRequest extends FormRequest
     public function attributes()
     {
         return [
-            'name' => 'tên danh mục',
             'parent_id' => 'danh mục cha'
         ];
     }

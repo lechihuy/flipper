@@ -13,15 +13,15 @@
                 <form action="{{ route('admin.categories.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label>Tên danh mục <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" name="name">
+                        <label>Tên <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                     </div>
                     <div class="form-group">
                         <label>Danh mục cha</label>
                         <select name="parent_id" class="form-control">
                             <option value="">-- Không --</option>
                             @foreach ($categories as $category)
-                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                <option value="{{ $category->id }}" @if ($category->id == old('parent_id')) selected @endif>{{ $category->name }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -36,7 +36,8 @@
                             {{ session('message') }}
                         </div>
                     @endif
-                    <button type="submit" class="btn btn-primary">Tạo</button>
+                    <a href="{{ route('admin.categories.index') }}" class="btn btn-light"><i class="fas fa-reply"></i> Trở về</a>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Tạo</button>
                 </form>
             </div>
         </div>

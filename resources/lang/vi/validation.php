@@ -51,12 +51,12 @@ return [
         'array' => 'The :attribute must have more than :value items.',
     ],
     'gte' => [
-        'numeric' => 'The :attribute must be greater than or equal :value.',
+        'numeric' => ':Attribute phải lớn hơn hoặc bằng :value.',
         'file' => 'The :attribute must be greater than or equal :value kilobytes.',
         'string' => 'The :attribute must be greater than or equal :value characters.',
         'array' => 'The :attribute must have :value items or more.',
     ],
-    'image' => 'The :attribute must be an image.',
+    'image' => ':Attribute phải là ảnh.',
     'in' => 'The selected :attribute is invalid.',
     'in_array' => 'The :attribute field does not exist in :other.',
     'integer' => 'The :attribute must be an integer.',
@@ -96,7 +96,7 @@ return [
     'numeric' => 'The :attribute must be a number.',
     'password' => 'The password is incorrect.',
     'present' => 'The :attribute field must be present.',
-    'regex' => 'The :attribute format is invalid.',
+    'regex' => ':Attribute không đúng định dạng.',
     'required' => ':Attribute là bắt buộc.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
@@ -152,7 +152,13 @@ return [
 
     'attributes' => [
         'username' => 'tên đăng nhập',
-        'password' => 'mật khẩu'
+        'password' => 'mật khẩu',
+        'title' => 'tiêu đề',
+        'name' => 'tên',
+        'category_id' => 'danh mục',
+        'price' => 'giá bán',
+        'cost' => 'giá gốc',
+        'description' => 'mô tả',
     ],
 
 ];

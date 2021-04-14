@@ -9,13 +9,19 @@
                 @include('admin.layouts.sidebar')
             </div>
             <div class="col-12 col-lg-9">
-                <h1 class="mb-4">Sửa danh mục</h1>
+                <h1 class="mb-4">Sửa danh mục
+                    <form action="{{ route('admin.categories.destroy', $category) }}" class="d-inline-block float-right" method="POST">
+                        @method('DELETE')
+                        @csrf
+                        <button class="btn btn-link text-danger" type="submit"><i class="fas fa-trash"></i> Xóa</button>
+                    </form>
+                </h1>
                 <form action="{{ route('admin.categories.update', $category) }}" method="POST">
                     @csrf
                     @method('PUT')
                     <div class="form-group">
                         <label>Tên danh mục <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" name="name" value="{{ $category->name }}">
+                        <input type="text" class="form-control" name="name" value="{{ old('name', $category->name) }}">
                     </div>
                     <div class="form-group">
                         <label>Danh mục cha</label>
@@ -23,7 +29,7 @@
                             <option value="">-- Không --</option>
                             @foreach ($categories as $item)
                                 <option value="{{ $item->id }}"
-                                    @if ($item->id == $category->parent_id) selected @endif
+                                    @if (old('parent_id', $category->parent_id) == $item->id) selected @endif
                                 >{{ $item->name }}</option>
                             @endforeach
                         </select>
@@ -39,7 +45,9 @@
                             {{ session('message') }}
                         </div>
                     @endif
-                    <button type="submit" class="btn btn-success">Sửa</button>
+                    <a href="{{ route('admin.categories.index') }}" class="btn btn-light"><i class="fas fa-reply"></i> Trở về</a>
+                    <button type="submit" class="btn btn-success"><i class="fas fa-edit"></i> Sửa</button>
+                  
                 </form>
             </div>
         </div>

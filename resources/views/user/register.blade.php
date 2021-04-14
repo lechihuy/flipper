@@ -30,7 +30,7 @@
                     </div>
 
                     <button type="submit" class=" form__login-btn btn btn-primary btn-block mx-auto">Đăng ký</button>
-                    <p class="mt-3 text-center">Nếu có tài khoản, nhấn <a href=""> đăng nhập </a></p>
+                    <p class="mt-3 text-center">Nếu có tài khoản, nhấn <a href="{{ route('login') }}" class="text-primary"> đăng nhập </a></p>
                 </div>
 
             </form>

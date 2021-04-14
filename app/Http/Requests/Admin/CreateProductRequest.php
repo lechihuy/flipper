@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class EditCategoryRequest extends FormRequest
+class CreateProductRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,15 +24,11 @@ class EditCategoryRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => "required|unique:categories,name,{$this->category}",
-            'parent_id' => 'sometimes|nullable|exists:categories,id'
-        ];
-    }
-
-    public function attributes()
-    {
-        return [
-            'parent_id' => 'danh mục cha'
+            'title' => 'required|unique:products,title',
+            'category_id' => 'required|exists:categories,id',
+            'price' => 'required|regex:/^[0-9]+$/',
+            'cost' => 'sometimes|nullable|regex:/^[0-9]+$/|gte:price',
+            'thumbnail' => 'sometimes|nullable|image'
         ];
     }
 }
