@@ -18,10 +18,10 @@
                 NIKE SB DUNK
             </h1>
 
-            <label class="mt-3 col-md-6 col-sm-4 col-sm-3">Chọn Size</label>
+            <label class="mt-3 d-flex">Chọn Size</label>
 
 
-            <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+            <div class="btn-group btn-group-md" role="group" aria-label="Basic example">
                 <button type="button" class="btn btn-light rounded-0 border">7 UK</button>
                 <button type="button" class="btn btn-light rounded-0 border">7.5 UK</button>
                 <button type="button" class="btn btn-light rounded-0 border">8 UK</button>
@@ -30,15 +30,13 @@
                 <button type="button" class="btn btn-light rounded-0 border">9.5 UK</button>
             </div>
 
-            <div class="nut mt-5 col-md 6">
+            <div class="mt-5">
                 <button type="button" class="btn btn-lg btn-dark border rounded">Mua Ngay</button>
                 <button type="button" class="btn btn-lg border rounded">Thêm vào giỏ hàng</button>
             </div>
-
             <p class="mt-5 text-justify">Không thể phủ nhận Nike Dunk là thiết kế bán chạy nhất của thương hiệu Swoosh và Nike Dunk Low City Market là biến thể mới nhất của giày thể thao cổ điển. Được các vận động viên bóng rổ, vận động viên trượt băng và sneakerhead cực kỳ yêu thích kể từ khi được giới thiệu vào năm 1985. </p>
-
-
         </div>
+
         <div class="container-fluid container-lg py-5 list-product">
             <h2 class='text-left mb-3 font-weight-light'>Sản phẩm liên quan</h2>
             <div class="row">
