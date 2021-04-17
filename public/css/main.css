@@ -77,3 +77,11 @@ footer .logo {
 a {
     color: black;
 }
+
+/* PRODUCT DETAIL */
+.nut {
+    width: 100%;
+}
+.nut button {
+    width: 90px;
+}
