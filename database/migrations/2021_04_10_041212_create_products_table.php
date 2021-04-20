@@ -18,11 +18,13 @@ class CreateProductsTable extends Migration
             $table->string('title');
             $table->string('slug');
             $table->string('price');
-            $table->string('cost');
-            $table->string('thumbnail_path');
-            $table->string('description');
+            $table->string('cost')->nullable();
+            $table->string('thumbnail_path')->nullable();
+            $table->longText('description')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->boolean('is_pinned')->default(false);
+            $table->timestamps();
         });
     }
 
