@@ -31,31 +31,13 @@
                     </div>
                     <div class="col-12">
                         <button type="button" class="btn btn-light rounded-0 border">7 UK</button>
-<<<<<<< HEAD
-                        <button type="button" class="btn btn-light rounded-0 border">7.5 UK</button>
-=======
                         <button type="button" class="btn btn-light rounded-0 border" disabled>7.5 UK</button>
->>>>>>> d0db00838649aa35a52caba03942af92bfbaa265
                         <button type="button" class="btn btn-light rounded-0 border">8 UK</button>
                         <button type="button" class="btn btn-light rounded-0 border">8.5 UK</button>
                     </div>
                     <div class="col-12 mt-2">
                         <button type="button" class="btn btn-light rounded-0 border">9 UK</button>
                         <button type="button" class="btn btn-light rounded-0 border">9.5 UK</button>
-<<<<<<< HEAD
-                        <button type="button" class="btn btn-light rounded-0 border">10 UK</button>
-                        <button type="button" class="btn btn-light rounded-0 border">10.5 UK</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="mt-5">
-                <button type="button" class="btn btn-lg btn-dark border rounded">Mua Ngay</button>
-                <button type="button" class="btn btn-lg border rounded">Thêm vào giỏ hàng</button>
-            </div>
-            <p class="mt-5 text-justify">Không thể phủ nhận Nike Dunk là thiết kế bán chạy nhất của thương hiệu Swoosh và Nike Dunk Low City Market là biến thể mới nhất của giày thể thao cổ điển. Được các vận động viên bóng rổ, vận động viên trượt băng và sneakerhead cực kỳ yêu thích kể từ khi được giới thiệu vào năm 1985. </p>
-=======
                         <button type="button" class="btn btn-light rounded-0 border" disabled>10 UK</button>
                         <button type="button" class="btn btn-light rounded-0 border">10.5 UK</button>
                     </div>
@@ -86,7 +68,6 @@
                 </div>
             </div>
             <p class="text-justify">Không thể phủ nhận Nike Dunk là thiết kế bán chạy nhất của thương hiệu Swoosh và Nike Dunk Low City Market là biến thể mới nhất của giày thể thao cổ điển. Được các vận động viên bóng rổ, vận động viên trượt băng và sneakerhead cực kỳ yêu thích kể từ khi được giới thiệu vào năm 1985. </p>
->>>>>>> d0db00838649aa35a52caba03942af92bfbaa265
         </div>
 
         <div class="container-fluid container-lg py-5 list-product">
