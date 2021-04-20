@@ -26,4 +26,9 @@ class Category extends Model
     {
         return self::where('parent_id', null)->where('id', '!=', $except)->get();
     }
+
+    public function children()
+    {
+        return $this->hasMany('App\Models\Category');
+    }
 }

@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CreateProductRequest extends FormRequest
+class EditProductRequest extends FormRequest
 {
     public function prepareForValidation()
     {
@@ -12,7 +12,7 @@ class CreateProductRequest extends FormRequest
             'is_pinned' => (bool) $this->is_pinned
         ]);
     }
-
+    
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -20,7 +20,7 @@ class CreateProductRequest extends FormRequest
      */
     public function authorize()
     {
-        return auth('admin')->check();
+        return true;
     }
 
     /**
@@ -31,7 +31,7 @@ class CreateProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|unique:products,title',
+            'title' => "required|unique:products,title,{$this->product}",
             'category_id' => 'required|exists:categories,id',
             'price' => 'required|regex:/^[0-9]+$/',
             'cost' => 'sometimes|nullable|regex:/^[0-9]+$/|gte:price',

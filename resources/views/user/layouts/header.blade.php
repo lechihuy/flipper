@@ -25,7 +25,7 @@
                     <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search">
                 </form>
                 <ul class="navbar-nav my-2">
-                    <li class="nav-list-item nav-item">
+                    {{-- <li class="nav-list-item nav-item">
                         <a class="nav-link" href="#">MEN</a>
                     </li>
                     <li class="nav-list-item nav-item">
@@ -39,12 +39,16 @@
                     </li>
                     <li class="nav-list-item nav-item">
                         <a class="nav-link" href="#">SALE</a>
-                    </li>
+                    </li> --}}
+                    @foreach (primary_menu() as $item)
+                        <li class="nav-item ml-0 ml-lg-4">
+                            <a class="nav-link" href="">{{ $item->name }}</a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
 </nav>
-
 <div class="bg-dark text-white text-center p-2">
     Hãy trở thành thành viên của Flipper để có thể theo dõi các đơn hàng đã đặt, đăng ký ngay <a class='text-warning' href="{{ route('register') }}"><ins>tại đây</ins> </a>
 </div>
