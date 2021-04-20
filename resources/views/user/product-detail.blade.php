@@ -20,27 +20,30 @@
             <div>
                 <label class="mt-3">Chọn Size</label>
             </div>
+            <div class="row">
 
-            <div class="btn-group btn-group-md nut row" role="group" aria-label="Basic example">
-                <div class="col-12 mb-2">
-                    <button type="button" class="btn btn-light rounded-0 border" disabled>5 UK</button>
-                    <button type="button" class="btn btn-light rounded-0 border">5.5 UK</button>
-                    <button type="button" class="btn btn-light rounded-0 border" disabled>6 UK</button>
-                    <button type="button" class="btn btn-light rounded-0 border">6.5 UK</button>
-                </div>
-                <div class="col-12">
-                    <button type="button" class="btn btn-light rounded-0 border">7 UK</button>
-                    <button type="button" class="btn btn-light rounded-0 border" disabled>7.5 UK</button>
-                    <button type="button" class="btn btn-light rounded-0 border">8 UK</button>
-                    <button type="button" class="btn btn-light rounded-0 border">8.5 UK</button>
-                </div>
-                <div class="col-12 mt-2">
-                    <button type="button" class="btn btn-light rounded-0 border">9 UK</button>
-                    <button type="button" class="btn btn-light rounded-0 border">9.5 UK</button>
-                    <button type="button" class="btn btn-light rounded-0 border" disabled>10 UK</button>
-                    <button type="button" class="btn btn-light rounded-0 border">10.5 UK</button>
+                <div class="btn-group btn-group-md nut row" role="group" aria-label="Basic example">
+                    <div class="col-12 mb-2">
+                        <button type="button" class="btn btn-light rounded-0 border">5 UK</button>
+                        <button type="button" class="btn btn-light rounded-0 border">5.5 UK</button>
+                        <button type="button" class="btn btn-light rounded-0 border">6 UK</button>
+                        <button type="button" class="btn btn-light rounded-0 border">6.5 UK</button>
+                    </div>
+                    <div class="col-12">
+                        <button type="button" class="btn btn-light rounded-0 border">7 UK</button>
+                        <button type="button" class="btn btn-light rounded-0 border">7.5 UK</button>
+                        <button type="button" class="btn btn-light rounded-0 border">8 UK</button>
+                        <button type="button" class="btn btn-light rounded-0 border">8.5 UK</button>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <button type="button" class="btn btn-light rounded-0 border">9 UK</button>
+                        <button type="button" class="btn btn-light rounded-0 border">9.5 UK</button>
+                        <button type="button" class="btn btn-light rounded-0 border">10 UK</button>
+                        <button type="button" class="btn btn-light rounded-0 border">10.5 UK</button>
+                    </div>
                 </div>
             </div>
+
 
             <div class="mt-5">
                 <button type="button" class="btn btn-lg btn-dark border rounded">Mua Ngay</button>
