@@ -53,12 +53,11 @@
                     <button type="button" class="flex-fill btn btn-light rounded-0 border">8.5 UK</button>
                 </div> --}}
                 <div class="row mx-0">
-                    @for ($i = 0; $i < 9; $i++)
-                    <div class="col-4 col-sm-3 col-md-2 col-lg-3 px-0">
+                    @for ($i = 0; $i < 9; $i++) <div class="col-4 col-sm-3 col-md-2 col-lg-3 px-0">
                         <button type="button" class="btn btn-outline-dark btn-block rounded-0 border">7 UK</button>
-                    </div>
-                    @endfor
                 </div>
+                @endfor
+            </div>
             <div class="my-4 row">
                 <div class="col-12 mb-2 col-sm-6">
                     <button type="button" class="btn btn-block btn-lg btn-dark border rounded text-warning">Mua Ngay</button>
