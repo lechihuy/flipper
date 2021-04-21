@@ -5,7 +5,7 @@
 @section('content')
 <div class="container mt-2">
     <div class="row">
-        <div class="col-lg-6 d-flex">
+        <div class="col-lg-6 d-flex my-4">
             <img class="w-100" src="https://static.nike.com/a/images/t_prod_ss/w_640,c_limit,f_auto/3b80f5a8-5819-4500-bb84-06cb1683863a/dunk-low-black-release-date.jpg">
         </div>
 
@@ -17,6 +17,8 @@
             <h1>
                 NIKE SB DUNK
             </h1>
+
+            <h6 class="my-4">2.929.000đ</h6>
             <div>
                 <label class="mt-3">Chọn Size</label>
             </div>
