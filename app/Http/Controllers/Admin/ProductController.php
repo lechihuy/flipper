@@ -67,7 +67,7 @@ class ProductController extends Controller
         $data = $request->validated();
 
         if ($request->has('thumbnail')) {
-            $thumbnailPath = $request->file('thumbnail')->store('products', 'public');
+            $thumbnailPath = 'storage/'.$request->file('thumbnail')->store('products', 'public');
         } else {
             $thumbnailPath = null;
         }
@@ -135,7 +135,7 @@ class ProductController extends Controller
 
         if ($request->has('thumbnail')) {
             Storage::disk('public')->delete($product->thumbnail_path);
-            $thumbnailPath = $request->file('thumbnail')->store('products', 'public');
+            $thumbnailPath = 'storage/'.$request->file('thumbnail')->store('products', 'public');
         } else {
             $thumbnailPath = $product->thumbnail_path;
         }
