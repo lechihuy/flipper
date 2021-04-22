@@ -67,9 +67,9 @@
                                             <a href="{{ route('admin.categories.edit', $product->category) }}">{{ $product->category->name }}</a>
                                         </td>
                                         <td>
-                                            <span class="text-danger d-block font-weight-bold">{{ $product->price }}</span>
+                                            <span class="text-danger d-block font-weight-bold">{{ price($product->price) }}</span>
                                             @isset($product->cost)
-                                                <del class="text-muted d-block">{{ $product->cost }}</del>
+                                                <del class="text-muted d-block">{{ price($product->cost) }}</del>
                                             @endisset
                                         </td>
                                         <td class="text-right">

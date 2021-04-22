@@ -1,6 +1,3 @@
-{{-- Muốn lấy ảnh logo dùng cú pháp <img src="{{ asset('images/flipper.jpg') }}"> --}}
-
-
 <footer class="bg-dark">
     <div class="container py-5">
         <div class = "row">
@@ -19,9 +16,9 @@
             
             <div class = "col-12 col-md-4 ">
                 <ul class = "pl-0 footer-links">
-                    <li class = "mb-3"><a class = "text-white" href="#">VỀ CHÚNG TÔI</a></li>
-                    <li class = "mb-3"><a class = "text-white" href="#">ĐIỀU KHOẢN SỬ DỤNG</a></li>
-                    <li class = "mb-3"><a class = "text-white" href="#">CHÍNH SÁCH</a></li>
+                    <li class = "mb-3"><a class = "text-white" href="{{ route('about_us') }}">VỀ CHÚNG TÔI</a></li>
+                    <li class = "mb-3"><a class = "text-white" href="{{ route('term_of_use') }}">ĐIỀU KHOẢN SỬ DỤNG</a></li>
+                    <li class="mb-3"><a class = "text-white" href="{{ route('policy') }}">CHÍNH SÁCH</a></li>
                 </ul>
             </div>
         </div>

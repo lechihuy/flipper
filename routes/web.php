@@ -27,7 +27,7 @@ Route::get('/ho-so', 'RenderController@showProfilePage')->name('profile');
 Route::get('/don-hang', 'RenderController@showOrderPage')->name('order');
 Route::get('/quen-mat-khau', 'RenderController@showForgotPasswordPage')->name('forgot_password');
 Route::get('/khoi-phuc-mat-khau', 'RenderController@showResetPasswordPage')->name('reset_password');
-
+Route::post('/dang-ki', 'UserController@register')->name('register.post');
 
 Route::prefix('admin')->name('admin.')->namespace('Admin')->group(function() {
     Route::view('', 'admin.dashboard')->name('dashboard')
