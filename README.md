@@ -17,6 +17,16 @@ cp .env.example .env
 
 - Vào phpMyadmin hoặc dùng lệnh MySQL để tạo database `flipper` với character set `utf8mb4` và collate là `utf8mb4_unicode_ci`.  
 
+- Mặc định  file `.env` cấu hình database như bên dưới, nếu có thay đổi gì thì có thể mở file này để chỉnh sửa
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=flipper
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
 - Sau đó tại đường dẫn thư mục `flipper` chạy lệnh:
 ```
 php artisan app:reset
