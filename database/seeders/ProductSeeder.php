@@ -23,7 +23,7 @@ class ProductSeeder extends Seeder
                 'price' => $faker->numberBetween($min = 500000, $max = 5000000),
                 'category_id' => Category::inRandomOrder()->first()->id,
                 'description' => $faker->paragraph($nb = 3),
-                'thumbnail_path' => 'storage/products/'.$faker->image('public/storage/products', 500, 500, null, false),
+                'thumbnail_path' => null,
             ]);
         }
 
