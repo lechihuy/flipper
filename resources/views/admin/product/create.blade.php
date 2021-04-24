@@ -70,6 +70,7 @@
                             {{ session('message') }}
                         </div>
                     @endif
+                    
                     <a href="{{ route('admin.products.index') }}" class="btn btn-light"><i class="fas fa-reply"></i> Trở về</a>
                     <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Tạo</button>
                 </form>

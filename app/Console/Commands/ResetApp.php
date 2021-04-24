@@ -3,23 +3,22 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Storage;
 
-class ClearStorage extends Command
+class ResetApp extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'storage:clear';
+    protected $signature = 'app:reset';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Clear all the storage';
+    protected $description = 'Reset the application';
 
     /**
      * Create a new command instance.
@@ -38,13 +37,9 @@ class ClearStorage extends Command
      */
     public function handle()
     {
-        if (Storage::disk('public')->exists('product')) {
-            $files = Storage::disk('public')->allFiles('products');
-            foreach ($files as $file) {
-                Storage::disk('public')->delete($file);
-            }
-        } else {
-            Storage::disk('public')->makeDirectory('product');
-        }
+        $this->call('storage:clear');
+        $this->call('storage:link');
+        $this->call('db:wipe');
+        $this->call('migrate', ['--seed' => true]);
     }
 }

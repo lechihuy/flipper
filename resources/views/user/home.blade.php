@@ -1,6 +1,6 @@
 @extends('user.layouts.master')
 
-@section('title', 'Trang chủ thay đổi')
+@section('title', 'Trang chủ')
 
 @section('content')
 {{-- Jumbotron --}}
@@ -33,7 +33,8 @@
         <div class="row">
             @foreach(latest_products(8) as $product)
                 @include('user.components.product', [
-                    'product' => $product
+                    'product' => $product,
+                    'class' => 'col-6 col-md-3 mb-4'
                 ])
             @endforeach
         </div>

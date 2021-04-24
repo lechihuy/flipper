@@ -33,7 +33,7 @@ class ProductController extends Controller
         if (isset($filter['q'])) {
             $products->where('title', 'like', '%'.$filter['q'].'%');
         }
-        $products = $products->paginate(20)->withQueryString();
+        $products = $products->latest()->paginate(20)->withQueryString();
         $categories = Category::all();
 
         return view('admin.product.index', [

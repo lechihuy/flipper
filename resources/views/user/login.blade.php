@@ -5,7 +5,8 @@
 @section('content')
     <div class="container-fluid py-5 bg-light">
         <div class="row justify-content-center">
-            <form class="bg-white shadow-lg border my-5 form__login align-self-center">
+            <form class="bg-white shadow-lg border my-5 form__login align-self-center" method="POST" action="{{ route('login') }}">
+                @csrf
                 <div class="form__tab row">
                     <div class="form__tab-item col-6 text-center">
                         <a class="nav-link d-block text-dark" href="{{ route('register') }}">Đăng ký</a>
@@ -17,22 +18,24 @@
 
                 <div class='p-3'>
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleDropdownFormPassword2" placeholder="Địa chỉ Email ...">
+                        <input type="email" class="form-control" name="email" placeholder="Địa chỉ Email ..." value="{{ old('username') }}">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Mật khẩu ...">
+                        <input type="password" class="form-control" name="password" placeholder="Mật khẩu ...">
                     </div>
 
                     <div class="form-group">
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="dropdownCheck2">
-                            <label id="form-check-text" class="form-check-label" for="dropdownCheck2">
+                            <input type="checkbox" class="form-check-input" id="remember" name="remember">
+                            <label id="form-check-text" class="form-check-label" for="remember">
                                 Nhớ mật khẩu? 
                             </label>
                         </div>
                     </div>
                     <button type="submit" class=" form__login-btn btn btn-dark text-warning btn-block mx-auto btn">Đăng nhập</button>
-                    <div id='form__login-forget' class='border-light border-bottom text-center'>Quên mật khẩu?</div>
+                    <div id='form__login-forget' class='border-light border-bottom text-center'>
+                        <a href="">Quên mật khẩu?</a>
+                    </div>
                     <a href="{{ route('register') }}" id='form__login-btn-create' type="submit" class=" form__login-btn btn btn-light btn-block mx-auto">Tạo tài khoản mới</a>
                 </div>
                 

@@ -8,10 +8,10 @@
             <div class="col-12 col-md-6">
                 <h1 class="display-4">{{ $pinnedProduct->title }}</h1>
                 <p class="lead text-muted">{{ $pinnedProduct->description }}</p>
-                <a href="http://https://www.google.com.vn/?hl=vi" class="btn btn-dark text-warning btn-lg my-3">Xem ngay</a>            
+                <a href="{{ route('product_detail', ['slug' => $pinnedProduct->slug]) }}" class="btn btn-dark text-warning btn-lg my-3">Xem ngay</a>            
             </div>
             <div class="col-12 col-md-6">
-                <img src="{{ $pinnedProduct->getThumbnail() }}" alt="{{ $pinnedProduct->title }}" class="w-100">
+               <a href="{{ route('product_detail', ['slug' => $pinnedProduct->slug]) }}"><img src="{{ $pinnedProduct->getThumbnail() }}" alt="{{ $pinnedProduct->title }}" class="w-100"></a>
             </div>  
         </div>
     </div>

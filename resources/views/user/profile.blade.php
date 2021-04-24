@@ -8,17 +8,7 @@
     <div class="container py-5">
     <div class="row">
         <div class="col-4">
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fas fa-user-edit"></i> Hồ sơ
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fas fa-clipboard-list"></i> Kiểm tra đơn hàng
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                    <i class="fas fa-sign-out-alt"></i> Đăng xuất
-                </a>
-            </div>
+            @include('user.components.user-sidebar')
         </div>
     
         <div class="col-8">

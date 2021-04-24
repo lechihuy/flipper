@@ -1,99 +1,62 @@
 @extends('user.layouts.master')
 
-@section('title', 'Trang chủ thay đổi')
+@section('title', 'Danh mục '.$category->name)
 
 @section('content')
-    {{-- Jumbotron --}}
+
+{{-- Jumbotron --}}
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
+    <div class="container-fluid container-lg">
         <div class="row">
-            <div class="col">
-                <h1 class="display-4">Flipper</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-                <a href="http://https://www.google.com.vn/?hl=vi" class="btn btn-light">Xem ngay</a>            
+            <div class="col-12">
+                <h1 class="display-4 mb-0">{{ $category->name }}</h1>
             </div>
-            <div class="col">
-                <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/5d6dcf91-8064-4869-a6c1-4f982adcbe4a/air-max-270-mens-shoe-KkLcGR.png" alt="Girl in a jacket" width="500" height="500">
-            </div>  
         </div>
     </div>
 </div>
+{{-- /Jumbotron --}}
 
-    {{-- /Jumbotron --}}
-
-{{-- Best Seller  --}}
 <section>
     <div class="container py-5">
         <div class="row">
-            <div class="col-3">
-                <div class="mb-5">
-                    <h5>Danh mục sản phẩm</h5>
-                    <p class="ml-3">
-                        <a class="text-dark" href="">Men</a>
-                    </p>
-                    <p class="ml-3">
-                        <a class="text-dark" href="">Women</a>
-                    </p>
-                    <p class="ml-3">
-                        <a class="text-dark" href="">Kid</a>
-                    </p>
-                    <p class="ml-3">
-                        <a class="text-dark" href="">Customise</a>
-                    </p>
-                    <p class="ml-3">
-                        <a class="text-dark" href="">Sales</a>
-                    </p>    
-                    
+            @if ($has_product > 0)
+                <div class="col-3">
+                    @include('user.components.product-filter-sidebar', [
+                        'categories' => $category->children()->orderBy('name')->get(),
+                    ])
                 </div>
-                <div>
-                    <h5>Chọn giá mức</h5>
-                    <p class="ml-3">
-                        <a class="text-dark" href="">Dưới 500 ngàn</a>
-                    </p>
-                    <p class="ml-3">
-                        <a class="text-dark" href="">Từ 500 - 2 triệu</a>
-                    </p>
-                    <p class="ml-3">
-                        <a class="text-dark" href="">Từ 2 - 4 triệu</a>
-                    </p>
-                    <p class="ml-3">
-                        <a class="text-dark" href="">trên 4 triệu</a>
-                    </p>
-
-                </div>
-            </div>
-            <div class="col-9">
-                <div class="row">
-                    @for($i = 0; $i < 6; $i++)
-                        <div class="col-4 mb-3">
-                            <img class="w-100 rounded" src="{{ asset('https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/a5f04850-c95a-4ed0-a2b3-1e6517c1278b/custom-nike-air-max-95-by-you.png') }}">
-                            <h5 class='mt-2 font-weight-bold'>Nike AF1 mắc nhất thế giới limited</h5>
-                            <p class='mb-0 font-weight-bold text-danger'>1.200.000</p>
-                            <p class='mb-0 text-muted'>
-                            <del>2.929.000đ</del>
-                            </p>
+                <div class="col-9">
+                    @if (count($products))
+                        <div class="row">
+                            @foreach ($products as $product)
+                                @include('user.components.product', [
+                                    'product' => $product,
+                                    'class' => 'col-4 mb-4'
+                                ])
+                            @endforeach
                         </div>
-                    @endfor
-                    <div class="mt-3 row ml-auto">
-                        <nav aria-label="Page navigation example ">
-                            <ul class="pagination">
-                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+                        {{ $products->links('user.components.pagination', ['class' => 'mt-3']) }}
+                    @else
+                        @include('user.components.empty-product', [
+                            'title' => 'Oops! Không tìm thấy sản phẩm nào',
+                            'caption' => 'Hệ thống không tìm thấy sản phẩm nào tương ứng với bộ lọc này',
+                            'action' => route('product_list', ['slug' => $category->slug]),
+                            'action_caption' => 'Trở về mặc định'
+                        ])
+                    @endif
                 </div>
-            </div>
+            @else
+                <div class="col-12">
+                    @include('user.components.empty-product', [
+                        'title' => 'Oops! Chưa có sản phẩm nào',
+                        'caption' => 'Danh mục này chưa có sản phẩm nào, chúng tôi sẽ cập nhật sớm nhất.',
+                        'action' => route('home'),
+                        'action_caption' => 'Trở về trang chủ'
+                    ])
+                </div>
+            @endif
         </div>
     </div>
-    
-   
 </section>
-
-
-
 
 @endsection

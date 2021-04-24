@@ -39,7 +39,7 @@ return [
     'digits_between' => 'The :attribute must be between :min and :max digits.',
     'dimensions' => 'The :attribute has invalid image dimensions.',
     'distinct' => 'The :attribute field has a duplicate value.',
-    'email' => 'The :attribute must be a valid email address.',
+    'email' => ':Attribute không hợp lệ.',
     'ends_with' => 'The :attribute must end with one of the following: :values.',
     'exists' => ':Attribute không tồn tại.',
     'file' => 'The :attribute must be a file.',
@@ -87,7 +87,7 @@ return [
     'min' => [
         'numeric' => 'The :attribute must be at least :min.',
         'file' => 'The :attribute must be at least :min kilobytes.',
-        'string' => 'The :attribute must be at least :min characters.',
+        'string' => ':Attribute phải có ít nhất :min ký tự.',
         'array' => 'The :attribute must have at least :min items.',
     ],
     'multiple_of' => 'The :attribute must be a multiple of :value.',
@@ -111,7 +111,7 @@ return [
     'size' => [
         'numeric' => 'The :attribute must be :size.',
         'file' => 'The :attribute must be :size kilobytes.',
-        'string' => 'The :attribute must be :size characters.',
+        'string' => ':Attribute phải đủ :size ký tự.',
         'array' => 'The :attribute must contain :size items.',
     ],
     'starts_with' => 'The :attribute must start with one of the following: :values.',
@@ -153,12 +153,18 @@ return [
     'attributes' => [
         'username' => 'tên đăng nhập',
         'password' => 'mật khẩu',
+
         'title' => 'tiêu đề',
         'name' => 'tên',
         'category_id' => 'danh mục',
         'price' => 'giá bán',
         'cost' => 'giá gốc',
         'description' => 'mô tả',
+
+        'fullname' => 'họ và tên',
+        'phone_number' => 'số điện thoại',
+        'email' => 'địa chỉ email',
+        'address' => 'địa chỉ nhận hàng'
     ],
 
 ];
