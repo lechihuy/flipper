@@ -18,7 +18,7 @@
                 <h5 class='mt-2 font-weight-bold'>Nike AF1 mắc nhất thế giới limited</h5>
                 <p class='mb-0 font-weight-bold text-danger'>1.200.000</p>
                 <p class='mb-0 text-muted'>
-                <del>2.929.000đ</del>
+                    <del>2.929.000đ</del>
                 </p>
             </div>
         @endfor

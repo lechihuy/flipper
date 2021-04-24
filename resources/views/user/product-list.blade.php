@@ -22,7 +22,7 @@
             @if ($has_product > 0)
                 <div class="col-3">
                     @include('user.components.product-filter-sidebar', [
-                        'categories' => $category->children()->orderBy('name')->get(),
+                        'categories' => $categories,
                     ])
                 </div>
                 <div class="col-9">

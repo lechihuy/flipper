@@ -8,7 +8,7 @@
     <p class='mb-0 font-weight-bold text-danger'>{{ price($product->price) }}</p>
     @if ($product->cost)
         <p class='mb-0 text-muted'>
-            <del>{{ price($product->cost) }}</del>
+            <small><del>{{ price($product->cost) }}</del></small>
         </p>
     @endif
 </div>

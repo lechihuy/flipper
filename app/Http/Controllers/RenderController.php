@@ -28,9 +28,14 @@ class RenderController extends Controller
         return view('user.cart');
     }
 
-    public function showProductDetailPage()
+    public function showProductDetailPage(Request $request, $slug)
     {
-        return view('user.product-detail');
+        $product = Product::where('slug', $slug)->firstOrFail();
+        $category = $product->category;
+        return view('user.product-detail', [
+            'product' => $product,
+            'category' => $category
+        ]);
     }
 
     public function showProductListPage(Request $request, $slug)
@@ -38,6 +43,8 @@ class RenderController extends Controller
         $filter = $request->only('price', 'category_id');
 
         $category = Category::where('slug', $slug)->firstOrFail();
+
+        $categories = $category->parents();
 
         $hasProduct = Product::where('category_id', $category->id)->count();
 
@@ -75,6 +82,7 @@ class RenderController extends Controller
             'category' => $category,
             'products' => $products,
             'has_product' => $hasProduct,
+            'categories' => $categories,
         ]);
     }
 

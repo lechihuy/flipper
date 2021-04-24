@@ -31,3 +31,10 @@ DB_PASSWORD=
 ```
 php artisan app:reset
 ```
+
+# Cập nhật
+Vào thư mục `flipper` chạy 2 lệnh sau:
+```
+composer dump-autoload
+php artisan app:reset
+```
