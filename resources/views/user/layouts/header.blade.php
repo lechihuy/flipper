@@ -7,8 +7,11 @@
           
             <div class="order-2 order-xl-3 d-flex">
                 @include('user.components.search', ['class' => 'd-none d-md-flex'])
-                <a href="{{ route('cart') }}"  class="navbar-icon d-inline-block p-2">
+                <a href="{{ route('cart') }}"  class="navbar-icon d-inline-block p-2 text-decoration-none">
                     <i class="nav-icon fas fa-shopping-cart"></i>
+                    @if (session('cart') && count(session('cart')) > 0)
+                        <span class="badge badge-danger">{{ count(session('cart')) }}</span>
+                    @endif
                 </a>
                 @auth
                     <a href="{{ route('profile') }}" class="navbar-icon d-inline-block p-2 text-dark">

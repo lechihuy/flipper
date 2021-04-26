@@ -18,20 +18,20 @@
 
                 <div class='p-3'>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="fullname" placeholder="Họ và tên của bạn ..." value="{{ old('fullname') }}">
+                        <input type="text" class="form-control" name="fullname" placeholder="Họ và tên" value="{{ old('fullname') }}">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" name="phone_number" placeholder="Số điện thoại ..." value="{{ old('phone_number') }}">
+                        <input type="text" class="form-control" name="phone_number" placeholder="Số điện thoại" value="{{ old('phone_number') }}">
                     </div>
                     <div class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="Địa chỉ Email ..." value="{{ old('email') }}">
+                        <input type="email" class="form-control" name="email" placeholder="Địa chỉ Email" value="{{ old('email') }}">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" name="password" placeholder="Mật khẩu ..." value="{{ old('phone_number') }}">
+                        <input type="password" class="form-control" name="password" placeholder="Mật khẩu" value="{{ old('phone_number') }}">
                     </div>
 
                      <div class="form-group">
-                        <input type="text" class="form-control" name="address" placeholder="Địa chỉ nhận hàng ..." value="{{ old('address') }}">
+                        <input type="text" class="form-control" name="address" placeholder="Địa chỉ giao hàng" value="{{ old('address') }}">
                     </div>
 
                     @if ($errors->any())

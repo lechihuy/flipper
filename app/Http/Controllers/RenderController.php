@@ -25,16 +25,33 @@ class RenderController extends Controller
 
     public function showCartPage()
     {
-        return view('user.cart');
+        if (! session('cart')) {
+            session(['cart' => []]);
+        }
+
+        $cart = session('cart');
+        $bill = 0;
+
+        foreach ($cart as $key => $item) {
+            $cart[$key]['product'] = Product::where('id', $item['product_id'])->first();
+            $bill += $item['qty'] * $cart[$key]['product']->price;
+        }
+
+        return view('user.cart', [
+            'cart' => $cart,
+            'bill' => $bill,
+        ]);
     }
 
     public function showProductDetailPage(Request $request, $slug)
     {
         $product = Product::where('slug', $slug)->firstOrFail();
         $category = $product->category;
+        $relatedProduct = Product::where('category_id', $category->id)->inRandomOrder()->take(8)->get();
         return view('user.product-detail', [
             'product' => $product,
-            'category' => $category
+            'category' => $category,
+            'related' => $relatedProduct,
         ]);
     }
 

@@ -1,19 +1,45 @@
+@php
+$categoryId = isset($category) ? $category->id : request()->query('category_id')
+@endphp
+
 <div class="mb-5">
     <h5 class="mb-3">Danh mục</h5>
-    @foreach ($categories as $item)
+    @empty($category)
         <p class="ml-3">
-            @if ($category->slug == $item->slug)
+            @if (! $categoryId)
                 <i class="fas fa-circle text-warning"></i>
             @endif
-            <a class="text-dark" href="{{ route('product_list', ['slug' => $item->slug, 'page' => null]) }}">{{ $item->name }}</a>
+            <a class="text-dark" href="
+                {{ request()->fullUrlWithQuery(['page' => null, 'category_id' => null]) }}
+            ">Tất cả</a>
+        </p>
+    @endempty
+    @foreach ($categories as $item)
+        <p class="ml-3">
+            @if ($categoryId == $item->id)
+                <i class="fas fa-circle text-warning"></i>
+            @endif
+            <a class="text-dark" href="
+                @isset($category) 
+                    {{ route('product_list', ['slug' => $item->slug, 'page' => null]) }}
+                @else 
+                    {{ request()->fullUrlWithQuery(['page' => null, 'category_id' => $item->id]) }}
+                @endisset
+            ">{{ $item->name }}</a>
         </p>
 
         @foreach ($item->children as $subItem)
             <p class="ml-5">
-                @if ($category->slug == $subItem->slug)
+                @if ($categoryId == $subItem->id)
                     <i class="fas fa-circle text-warning"></i>
                 @endif
-                <a class="text-dark" href="{{ route('product_list', ['slug' => $subItem->slug, 'page' => null]) }}">{{ $subItem->name }}</a>
+                <a class="text-dark" href="
+                @isset($category) 
+                    {{ route('product_list', ['slug' => $subItem->slug, 'page' => null]) }}
+                @else 
+                    {{ request()->fullUrlWithQuery(['page' => null, 'category_id' => $item->id]) }}
+                @endisset
+                ">{{ $subItem->name }}</a>
             </p>
         @endforeach
     @endforeach

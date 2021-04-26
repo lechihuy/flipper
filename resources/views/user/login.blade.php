@@ -18,10 +18,10 @@
 
                 <div class='p-3'>
                     <div class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="Địa chỉ Email ..." value="{{ old('username') }}">
+                        <input type="email" class="form-control" name="email" placeholder="Địa chỉ Email" value="{{ old('username') }}">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" name="password" placeholder="Mật khẩu ...">
+                        <input type="password" class="form-control" name="password" placeholder="Mật khẩu">
                     </div>
 
                     <div class="form-group">
@@ -33,9 +33,17 @@
                         </div>
                     </div>
                     <button type="submit" class=" form__login-btn btn btn-dark text-warning btn-block mx-auto btn">Đăng nhập</button>
+                    
+                    @if ($errors->any())
+                        <div class="alert alert-danger mt-3 mb-0">
+                            {{ $errors->first() }}
+                        </div>
+                    @endif
+                    
                     <div id='form__login-forget' class='border-light border-bottom text-center'>
                         <a href="">Quên mật khẩu?</a>
                     </div>
+                    
                     <a href="{{ route('register') }}" id='form__login-btn-create' type="submit" class=" form__login-btn btn btn-light btn-block mx-auto">Tạo tài khoản mới</a>
                 </div>
                 

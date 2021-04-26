@@ -25,7 +25,7 @@ class UserController extends Controller
         if (auth()->attempt($credentials, $request->remember)) {
             return redirect()->route('home');
         } else {
-            return back()->with('message', 'Thông tin đăng nhập không chính xác.');
+            return back()->withErrors('Thông tin đăng nhập không chính xác.');
         }
     }
 

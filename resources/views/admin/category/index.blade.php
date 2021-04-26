@@ -3,7 +3,7 @@
 @section('title', 'Danh sách danh mục')
 
 @section('content')
-    <div class="container py-3">
+    <div class="container-fluid py-3">
         <div class="row">
             <div class="col-12 col-lg-3">
                 @include('admin.layouts.sidebar')
@@ -52,7 +52,10 @@
                         </table>
                     </div>
                 @else
-                    <div class="alert alert-info mt-3">Chưa có danh mục nào.</div>
+                    <div class="jumbotron jumbotron-fluid bg-white text-center">
+                        <img src="{{ asset('images/empty-box.png') }}" width="100">
+                        <h4 class="mt-3 mb-3">Chưa có dữ liệu nào</h4>
+                    </div>
                 @endif
             </div>
         </div>

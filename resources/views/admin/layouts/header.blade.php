@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
+    <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="{{ asset('images/flipper-light.png') }}" alt="" height="30">
         </a>
