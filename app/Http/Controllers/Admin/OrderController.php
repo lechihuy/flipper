@@ -64,7 +64,13 @@ class OrderController extends Controller
      */
     public function show($id)
     {
-        //
+        $order = Order::findOrFail($id);
+
+        return view('admin.order.show', [
+            'order' => $order,
+            'user' => $order->user,
+            'items' => $order->items
+        ]);
     }
 
     /**
@@ -87,7 +93,12 @@ class OrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $order = Order::findOrFail($id);
+
+        $order->status = $request->status;
+        $order->save();
+
+        return back();
     }
 
     /**
@@ -98,6 +109,9 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $order = Order::findOrFail($id);
+        $order->delete();
+
+        return redirect()->route('admin.orders.index');
     }
 }

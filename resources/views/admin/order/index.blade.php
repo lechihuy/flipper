@@ -1,6 +1,6 @@
 @extends('admin.layouts.master')
 
-@section('title', 'Danh sách khách hàng')
+@section('title', 'Danh sách đơn hàng')
 
 @section('content')
     <div class="container-fluid py-3">
