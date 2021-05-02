@@ -22,7 +22,11 @@ Route::post('/dang-nhap', 'UserController@login')->name('login.post');
 Route::get('/dang-xuat', 'UserController@logout')->name('logout');
 
 Route::get('/ho-so', 'RenderController@showProfilePage')->name('profile');
+Route::post('/ho-so', 'UserController@updateProfile')->name('profile.update');
+Route::post('/doi-mat-khau', 'UserController@changePassword')->name('change_password');
 Route::get('/don-hang', 'RenderController@showOrderPage')->name('order');
+Route::get('/chi-tiet-don-hang/{order}', 'RenderController@showOrderDetailPage')->name('order_detail');
+Route::post('/huy-don-hang/{order}', 'OrderController@cancel')->name('cancel_order');
 Route::get('/quen-mat-khau', 'RenderController@showForgotPasswordPage')->name('forgot_password');
 Route::get('/khoi-phuc-mat-khau', 'RenderController@showResetPasswordPage')->name('reset_password');
 
@@ -30,7 +34,7 @@ Route::get('/gio-hang', 'RenderController@showCartPage')->name('cart');
 Route::get('/them-vao-gio-hang', 'OrderController@addToCart')->name('add_to_cart');
 Route::get('/xoa-khoi-gio-hang', 'OrderController@removeToCart')->name('remove_to_cart');
 Route::get('/cap-nhat-gio-hang', 'OrderController@updateCart')->name('update_cart');
-Route::post('/dat-hang', 'OrderController@order')->name('order');
+Route::post('/dat-hang', 'OrderController@order')->name('checkout');
 Route::get('/tim-kiem', 'RenderController@showSearchPage')->name('search');
 Route::get('/p/{slug}', 'RenderController@showProductDetailPage')->name('product_detail');
 Route::get('/c/{slug}', 'RenderController@showProductListPage')->name('product_list');

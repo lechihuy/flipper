@@ -80,7 +80,7 @@
                                                     <span class="badge badge-success">Đã giao hàng</span>
                                                     @break
                                                 @case('cancel')
-                                                    <span class="badge badge-success">Hủy đơn</span>
+                                                    <span class="badge badge-danger">Hủy đơn</span>
                                                     @break
                                             @endswitch
                                         </td>

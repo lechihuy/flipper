@@ -5,12 +5,27 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Order;
+use App\Models\OrderItem;
 
 class RenderController extends Controller
 {
     public function showHomePage()
     {
-        return view('user.home');
+        $pinnedProduct = Product::where('is_pinned', 1)->first();
+        $latestProducts = Product::latest()->take(8)->get();
+        $bestSellProductIds = OrderItem::select('product_id')->groupBy('product_id')->orderByRaw('SUM(qty) DESC')->take(4)->get()->pluck('product_id')->toArray();
+        $bestSellProducts = [];
+
+        $bestSellProducts = array_map(function($productId) {
+            return Product::find($productId);
+        }, $bestSellProductIds);
+
+        return view('user.home', [
+            'pinned_product' => $pinnedProduct,
+            'latest_products' => $latestProducts,
+            'best_sell_products' => $bestSellProducts,
+        ]);
     }
 
     public function showLoginPage()
@@ -120,12 +135,42 @@ class RenderController extends Controller
 
     public function showProfilePage()
     {
-        return view('user.profile');
+        $user = auth()->user();
+        return view('user.profile', [
+            'user' => $user,
+        ]);
     }
 
-    public function showOrderPage()
+    public function showOrderPage(Request $request)
     {
-        return view('user.order');
+        $filter = $request->only('status', 'q');
+        $orders = Order::select('*');
+        if (isset($filter['status'])) {
+            $orders->where('status', $filter['status']);
+        }
+        if (isset($filter['q'])) {
+            $orders->where('code', 'like', '%'.$filter['q'].'%');
+            $orders->orWhere('fullname', 'like', '%'.$filter['q'].'%');
+            $orders->orWhere('email', 'like', '%'.$filter['q'].'%');
+            $orders->orWhere('phone_number', 'like', '%'.$filter['q'].'%');
+            $orders->orWhere('address', 'like', '%'.$filter['q'].'%');
+            $orders->orWhere('created_at', 'like', '%'.$filter['q'].'%');
+        }
+        $orders = $orders->latest()->where('user_id', auth()->user()->id)->paginate(20)->withQueryString();
+
+        return view('user.order', [
+            'orders' => $orders
+        ]);
+    }
+
+    public function showOrderDetailPage(Request $request, $order)
+    {
+        $order = Order::findOrFail($order);
+
+        return view('user.order-detail', [
+            'order' => $order,
+            'items' => $order->items
+        ]);
     }
 
     public function showSearchPage(Request $request)

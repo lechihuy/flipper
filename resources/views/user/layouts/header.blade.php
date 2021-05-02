@@ -45,3 +45,9 @@
     Hãy trở thành thành viên của Flipper để có thể theo dõi các đơn hàng đã đặt, đăng ký ngay <a class='text-warning' href="{{ route('register') }}"><ins>tại đây</ins> </a>
 </div>
 @endguest
+
+@auth
+<div class="bg-dark text-white text-center p-2">
+    Bạn đang sử dụng địa chỉ giao hàng là <span class="text-warning">{{ auth()->user()->address }}</span>, để thay đổi hãy nhấn <a class='text-warning' href="{{ route('profile') }}"><ins>tại đây</ins> </a>
+</div>
+@endauth

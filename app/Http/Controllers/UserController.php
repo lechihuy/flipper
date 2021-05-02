@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRegisterRequest;
+use App\Http\Requests\UserUpdateProfileRequest;
+use App\Http\Requests\UserChangePasswordRequest;
 use App\Models\User;
 
 class UserController extends Controller
@@ -25,7 +27,7 @@ class UserController extends Controller
         if (auth()->attempt($credentials, $request->remember)) {
             return redirect()->route('home');
         } else {
-            return back()->withErrors('Thông tin đăng nhập không chính xác.');
+            return back()->withInput()->withErrors('Thông tin đăng nhập không chính xác.');
         }
     }
 
@@ -36,5 +38,24 @@ class UserController extends Controller
         $request->session()->regenerateToken();
 
         return redirect()->route('home');
+    }
+
+    public function updateProfile(UserUpdateProfileRequest $request)
+    {
+        $data = $request->validated();
+
+        auth()->user()->update($data);
+
+        return back()->with('profile_message', 'Cập nhật hồ sơ thành công.');
+    }
+
+    public function changePassword(UserChangePasswordRequest $request)
+    {
+        $data = $request->validated();
+
+        auth()->user()->update(['password' => bcrypt($data['password'])]);
+
+        return back()->with('password_message', 'Đổi mật khẩu thành công.');
+
     }
 }

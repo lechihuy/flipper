@@ -18,7 +18,7 @@
 
                 <div class='p-3'>
                     <div class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="Địa chỉ Email" value="{{ old('username') }}">
+                        <input type="email" class="form-control" name="email" placeholder="Địa chỉ Email" value="{{ old('email') }}">
                     </div>
                     <div class="form-group">
                         <input type="password" class="form-control" name="password" placeholder="Mật khẩu">

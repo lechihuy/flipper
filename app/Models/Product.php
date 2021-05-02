@@ -18,4 +18,9 @@ class Product extends Model
     {
         return asset($this->thumbnail_path ?? 'images/no-thumbnail.png');
     }
+
+    public function order_items()
+    {
+        return $this->belongsTo('App\Models\OrderItem');
+    }
 }

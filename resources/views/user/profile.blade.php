@@ -1,6 +1,6 @@
 @extends('user.layouts.master')
 
-@section('title', 'Ho so')
+@section('title', 'Hồ sơ')
 
 @section('content')
 
@@ -12,33 +12,66 @@
         </div>
     
         <div class="col-8">
-            <form class='mb-5'>
-                <h5>Hồ sơ</h5>
+            <form class='mb-5' method="POST" action="{{ route('profile.update') }}">
+                @csrf
+                <h1 class="mb-3">Hồ sơ</h1>
                 <div class="form-group">
-                    <input type="email" disabled class="form-control" id="exampleDropdownFormPassword2" placeholder="Địa chỉ Email ...">
+                    <label for="">Địa chỉ Email</label>
+                    <input type="email" disabled class="form-control" value="{{ $user->email }}">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="exampleDropdownFormPassword2" placeholder="Họ và tên ...">
+                    <label for="">Họ và tên</label>
+                    <input type="text" class="form-control" name="fullname" value="{{ old('fullname', $user->fullname) }}">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="exampleDropdownFormPassword2" placeholder="Địa chỉ ...">
+                    <label for="">Địa chỉ giao hàng</label>
+                    <input type="text" class="form-control" name="address" value="{{ old('address', $user->address) }}">
                 </div>
-                
                 <div class="form-group">
-                    <input type="text" class="form-control" id="exampleDropdownFormPassword2" placeholder="Số điện thoại...">  
+                    <label for="">Số điện thoại</label>
+                    <input type="text" class="form-control" name="phone_number" value="{{ old('phone_number', $user->phone_number)}}">  
                 </div>
-                <button type="submit" class=" form__login-btn btn btn-success btn-block mx-auto">Lưu thay đổi</button>
+                @if ($errors->any() && (! $errors->has('old_password') && ! $errors->has('password') && ! $errors->has('password_confirmation')))
+                    <div class="alert alert-danger">
+                        {{ $errors->first() }}
+                    </div>
+                @endif
+
+                @if (session('profile_message'))
+                    <div class="alert alert-success">
+                        {{ session('profile_message') }}
+                    </div>
+                @endif
+
+                <button type="submit" class="btn btn-success btn-block mx-auto">Cập nhật</button>
             </form>
 
-            <form>
-                <h5>Đổi mật khẩu</h5>
+            <form method="POST" action="{{ route('change_password') }}">
+                @csrf
+                <h1 class="mb-3">Đổi mật khẩu</h1>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Nhập mật khẩu cũ ...">
+                    <input type="password" class="form-control" name="old_password" placeholder="Nhập mật khẩu cũ ...">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Nhập mật khẩu mới ...">
+                    <input type="password" class="form-control" name="password" placeholder="Nhập mật khẩu mới ...">
                 </div>
-                <button type="submit" class=" form__login-btn btn btn-primary btn-block mx-auto">Lưu thay đổi</button>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password_confirmation" placeholder="Nhập lại mật khẩu mới ...">
+                </div>
+
+                @if ($errors->any() && ($errors->has('old_password') || $errors->has('password') || $errors->has('password_confirmation')))
+                    <div class="alert alert-danger">
+                        {{ $errors->first() }}
+                    </div>
+                @endif
+
+                @if (session('password_message'))
+                    <div class="alert alert-success">
+                        {{ session('password_message') }}
+                    </div>
+                @endif
+
+                <button type="submit" class="btn btn-primary btn-block mx-auto">Lưu thay đổi</button>
             </form>
         </div>
     </div>

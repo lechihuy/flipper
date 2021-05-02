@@ -11,7 +11,7 @@
 
     <link rel="icon" type="image/png" href="{{ asset('images/flipper-icon.png') }}">
     
-    @push('styles')
+    @stack('styles')
 </head>
 <body>
     @auth('admin')
@@ -26,5 +26,7 @@
 
     <script src="{{ asset('jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+
+    @stack('scripts')
 </body>
 </html>

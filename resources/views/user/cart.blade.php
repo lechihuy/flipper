@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <h4 class="mt-4 mb-3">Thông tin khách hàng</h4>
-                <form action="{{ route('order') }}" method="POST">
+                <form action="{{ route('checkout') }}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label>Họ và tên</label>

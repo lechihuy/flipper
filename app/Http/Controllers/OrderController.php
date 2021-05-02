@@ -148,4 +148,18 @@ class OrderController extends Controller
 
         return back()->with('just_payment', true);
     }
+
+    public function cancel(Request $requets, $order)
+    {
+        $order = Order::findOrFail($order);
+
+        if ($order->status != 'pending') {
+            abort(403);
+        }
+
+        $order->status = 'cancel';
+        $order->save();
+
+        return back();
+    }
 }

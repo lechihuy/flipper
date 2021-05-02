@@ -1,40 +1,53 @@
-@extends('admin.layouts.master')
+@extends('user.layouts.master')
 
-@section('title', 'Chi tiết đơn hàng')
+@section('title', 'Kiểm tra đơn hàng')
 
 @section('content')
-    <div class="container-fluid py-3">
-        <div class="row">
-            <div class="col-12 col-lg-3">
-                @include('admin.layouts.sidebar')
+
+<main class="bg-light">
+    <div class="container-fluid py-5">
+        <div class="row" style="min-height: calc(100vh - 300px)">
+            <div class="col-12 col-lg-3 mb-3">
+                <div class="list-group">
+                    <a href="{{ route('profile') }}" class="list-group-item list-group-item-action">
+                        <i class="fas fa-user-edit"></i> Hồ sơ
+                    </a>
+                    <a href="{{ route('order') }}" class="list-group-item list-group-item-action">
+                        <i class="fas fa-clipboard-list"></i> Kiểm tra đơn hàng
+                    </a>
+                    <a href="{{ route('logout') }}" class="list-group-item list-group-item-action">
+                        <i class="fas fa-sign-out-alt"></i> Đăng xuất
+                    </a>
+                </div>
             </div>
+        
             <div class="col-12 col-lg-9">
-                <h1 class="mb-4">Chi tiết đơn hàng <code>{{ $order->code }}</code>
-                    <form action="{{ route('admin.orders.destroy', $order) }}" class="d-inline-block float-right" method="POST">
-                        @method('DELETE')
+               <h1 class="mb-4">Chi tiết đơn hàng <code>{{ $order->code }}</code>
+                    <form action="{{ route('cancel_order', $order) }}" class="d-inline-block float-right" method="POST">
                         @csrf
-                        <a href="{{ route('admin.orders.index') }}" class="btn btn-light"><i class="fas fa-reply"></i> Trở về</a>
-                        <button class="btn btn-link text-danger" type="submit"><i class="fas fa-trash"></i> Xóa</button>
+                        <a href="{{ route('order') }}" class="btn btn-light"><i class="fas fa-reply"></i> Trở về</a>
+                        <button class="btn btn-link text-danger" type="submit"
+                            @if ($order->status != 'pending') disabled @endif
+                        ><i class="fas fa-ban"></i> Hủy đơn hàng</button>
                     </form>
                 </h1>
-                <form action="{{ route('admin.orders.update', $order) }}" method="POST" class="mb-3">
-                    @csrf
-                    @method('PUT')
 
-                    <label>Trạng thái</label>
-                    <div class="input-group">
-                        <select name="status" class="custom-select">
-                            @foreach (config('order_status') as $status => $label)
-                                <option value="{{ $status }}"
-                                    @if ($order->status == $status) selected @endif
-                                >{{ $label }}</option>
-                            @endforeach
-                        </select>
-                        <div class="input-group-append">
-                            <button class="btn btn-success" type="submit">Cập nhật</button>
-                        </div>
-                    </div>
-                </form>
+                <label>Trạng thái</label>
+                @switch ($order->status)
+                    @case('pending')
+                        <span class="badge badge-secondary">Chờ xử lý</span>
+                        @break
+                    @case('sending')
+                        <span class="badge badge-primary">Đang giao</span>
+                        @break
+                    @case('success')
+                        <span class="badge badge-success">Đã giao hàng</span>
+                        @break
+                    @case('cancel')
+                        <span class="badge badge-danger">Hủy đơn</span>
+                        @break
+                @endswitch
+                    
                 <div class="jumbotron py-4">  
                     <h4 class="mb-3">Thông tin khách hàng</h4>
                     <p>Họ và tên: {{ $order->fullname }}</p>
@@ -103,9 +116,12 @@
                     
                     </div>
                 </div>
-            </div>
-        </div>
+                
+                
             </div>
         </div>
     </div>
+</main>
+
+
 @endsection
