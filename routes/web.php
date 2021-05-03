@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes([
+    'register' => false,
+    'login' => false,
+    'logout' => false,
+]);
+
 Route::get('/', 'RenderController@showHomePage')->name('home');
 
 Route::get('/dang-nhap', 'RenderController@showLoginPage')->name('login');
@@ -28,6 +34,7 @@ Route::get('/don-hang', 'RenderController@showOrderPage')->name('order');
 Route::get('/chi-tiet-don-hang/{order}', 'RenderController@showOrderDetailPage')->name('order_detail');
 Route::post('/huy-don-hang/{order}', 'OrderController@cancel')->name('cancel_order');
 Route::get('/quen-mat-khau', 'RenderController@showForgotPasswordPage')->name('forgot_password');
+Route::post('/quen-mat-khau', 'UserController@sendForgotPasswordRequest')->name('send_forgot_password_request');
 Route::get('/khoi-phuc-mat-khau', 'RenderController@showResetPasswordPage')->name('reset_password');
 
 Route::get('/gio-hang', 'RenderController@showCartPage')->name('cart');

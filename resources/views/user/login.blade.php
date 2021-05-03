@@ -41,7 +41,7 @@
                     @endif
                     
                     <div id='form__login-forget' class='border-light border-bottom text-center'>
-                        <a href="">Quên mật khẩu?</a>
+                        <a href="{{ route('forgot_password') }}">Quên mật khẩu?</a>
                     </div>
                     
                     <a href="{{ route('register') }}" id='form__login-btn-create' type="submit" class=" form__login-btn btn btn-light btn-block mx-auto">Tạo tài khoản mới</a>

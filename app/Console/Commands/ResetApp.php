@@ -11,7 +11,7 @@ class ResetApp extends Command
      *
      * @var string
      */
-    protected $signature = 'app:reset';
+    protected $signature = 'app:reset {--env=}';
 
     /**
      * The console command description.
@@ -36,10 +36,21 @@ class ResetApp extends Command
      * @return int
      */
     public function handle()
-    {
+    {   
+        $path = base_path();
+
+        $command = "composer install";
+        exec("cd {$path} && {$command}");
+
+        if ($this->option('env')) {
+            $command = "cp .env.example .env";
+            exec("cd {$path} && {$command}");
+        }
+
         $this->call('storage:clear');
         $this->call('storage:link');
         $this->call('db:wipe');
         $this->call('migrate', ['--seed' => true]);
+        
     }
 }

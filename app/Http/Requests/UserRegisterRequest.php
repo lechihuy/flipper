@@ -27,7 +27,7 @@ class UserRegisterRequest extends FormRequest
             'fullname' => 'required|string',
             'phone_number' => 'required|size:10|regex:/^[0-9]+$/|unique:users,phone_number',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:6',
+            'password' => 'required|min:8',
             'address' => 'required'
         ];
     }

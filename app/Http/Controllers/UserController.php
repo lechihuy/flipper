@@ -7,6 +7,7 @@ use App\Http\Requests\UserRegisterRequest;
 use App\Http\Requests\UserUpdateProfileRequest;
 use App\Http\Requests\UserChangePasswordRequest;
 use App\Models\User;
+use Illuminate\Support\Facades\Password;
 
 class UserController extends Controller
 {
@@ -57,5 +58,22 @@ class UserController extends Controller
 
         return back()->with('password_message', 'Đổi mật khẩu thành công.');
 
+    }
+
+    public function sendForgotPasswordRequest(Request $request)
+    {
+        $user = User::where('email', $request->email)->first();
+
+        if (! $user) {
+            return back()->withErrors(['email' => 'Địa chỉ Email không tồn tại.']);
+        }
+
+        $status = Password::sendResetLink(
+            $request->only('email')
+        );
+    
+        return $status === Password::RESET_LINK_SENT
+                    ? back()->with(['message' => __($status)])
+                    : back()->withErrors(['email' => __($status)]);
     }
 }

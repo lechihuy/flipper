@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             'phone_number' => '0933160483',
             'email' => 'lechihuy1062001@gmail.com',
             'address' => '144/15 Bình Lợi, Bình Thành, tp. Hồ Chí Minh',
-            'password' => bcrypt('flipper')
+            'password' => bcrypt('flipper2021')
         ]);
     }
 }
