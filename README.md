@@ -33,8 +33,13 @@ php artisan app:reset
 ```
 
 # Cập nhật
-Vào thư mục `flipper` chạy 2 lệnh sau:
+Vào thư mục `flipper`, nếu muốn cập nhật cấu hình thì tham số `env` để là `true`, ngược lại thì `false`.
 ```
-composer dump-autoload
-php artisan app:reset
+php artisan app:reset --env=true 
+```
+
+hoặc
+
+```
+php artisan app:reset --env=true
 ```
