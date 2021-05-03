@@ -89,16 +89,16 @@
                                 <div class="progress">
                                     @php
                                         $countPendingOrder = $order->where('status', 'pending')->count();
-                                        $widthPendingOrder = ($countPendingOrder / $order->count()) * 100;
+                                        $widthPendingOrder = $order->count() > 0 ? ($countPendingOrder / $order->count()) * 100 : 0;
 
                                         $countSendingOrder = $order->where('status', 'sending')->count();
-                                        $widthSendingOrder = ($countSendingOrder / $order->count()) * 100;
+                                        $widthSendingOrder = $order->count() > 0 ? ($countSendingOrder / $order->count()) * 100 : 0;
 
                                         $countSuccessOrder = $order->where('status', 'success')->count();
-                                        $widthSuccessOrder = ($countSuccessOrder / $order->count()) * 100;
+                                        $widthSuccessOrder = $order->count() > 0 ? ($countSuccessOrder / $order->count()) * 100 : 0;
 
                                         $countCancelOrder = $order->where('status', 'cancel')->count();
-                                        $widthCancelOrder = ($countCancelOrder / $order->count()) * 100;
+                                        $widthCancelOrder = $order->count() > 0 ? ($countCancelOrder / $order->count()) * 100 : 0;
                                     @endphp
                                     @if ($countPendingOrder > 0)
                                         <div class="progress-bar bg-secondary" style="width: {{ $widthPendingOrder }}%" ></div>
