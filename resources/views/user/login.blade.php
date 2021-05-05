@@ -44,7 +44,7 @@
                         <a href="{{ route('forgot_password') }}">Quên mật khẩu?</a>
                     </div>
                     
-                    <a href="{{ route('register') }}" id='form__login-btn-create' type="submit" class=" form__login-btn btn btn-light btn-block mx-auto">Tạo tài khoản mới</a>
+                    <a href="{{ route('register') }}" id='form__login-btn-create' class=" form__login-btn btn btn-light btn-block mx-auto">Tạo tài khoản mới</a>
                 </div>
                 
             </form>
