@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container py-5">
-    <h2>CHÍNH SÁCH</h2>
+    <h2 class="mb-3">CHÍNH SÁCH</h2>
         <h5>ĐẢM BẢO THÔNG TIN CỦA BẠN PHÙ HỢP VÀ CHUYÊN NGHIỆP</h5>
             <p>
             Không sử dụng các từ, cụm từ hoặc ký hiệu trong mọi thông tin điện tử – 

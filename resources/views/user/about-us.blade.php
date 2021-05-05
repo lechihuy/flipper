@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container py-5">
-    <h2>NHỮNG BƯỚC CHÂN KHÔNG MỎI</h2>
+    <h2 class="mb-3">NHỮNG BƯỚC CHÂN KHÔNG MỎI</h2>
     <p>
     Từ một cơ sở sản xuất nhỏ khởi nghiệp từ năm 2020 ``
     chỉ với 6 thành viên nhưng có sự quyết tâm cao độ, 
@@ -20,10 +20,10 @@
     đủ sức để cạnh tranh với các thương hiệu lớn trên thế giới
     </p>
     <div class="row">
-        <div class="col">  
-            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/5d6dcf91-8064-4869-a6c1-4f982adcbe4a/air-max-270-mens-shoe-KkLcGR.png" alt="Girl in a jacket" width="500" height="500">        
+        <div class="col-12 col-md-6 mb-3 mb-md-0">  
+            <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/5d6dcf91-8064-4869-a6c1-4f982adcbe4a/air-max-270-mens-shoe-KkLcGR.png" alt="Girl in a jacket" class="w-100">        
         </div>
-        <div class="col">
+        <div class="col-12 col-md-6">
             <h2>TẦM NHÌN</h2>
             <p>
             Trở thành thương hiệu lớn mạnh tại Việt Nam.
