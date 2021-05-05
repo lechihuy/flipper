@@ -39,9 +39,6 @@ class ResetApp extends Command
     {   
         $path = base_path();
 
-        $command = "composer install";
-        exec("cd {$path} && {$command}");
-
         if ($this->option('env')) {
             $command = "cp .env.example .env";
             exec("cd {$path} && {$command}");
