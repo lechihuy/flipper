@@ -15,7 +15,7 @@
                 </a>
                 @auth
                     <a href="{{ route('profile') }}" class="navbar-icon d-inline-block p-2 text-dark">
-                        <i class="nav-icon fas fa-user"></i> {{ auth()->user()->fullname }}
+                        <i class="nav-icon fas fa-user"></i> <span class="d-none d-sm-inline-block">{{ auth()->user()->fullname }}</span>
                     </a>
                 @else
                     <a href="{{ route('login') }}" class="navbar-icon d-inline-block p-2">
