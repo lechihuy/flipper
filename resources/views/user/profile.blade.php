@@ -7,11 +7,11 @@
 <main class="bg-light">
     <div class="container py-5">
     <div class="row">
-        <div class="col-4">
+        <div class="col-12 col-lg-4 mb-4">
             @include('user.components.user-sidebar')
         </div>
     
-        <div class="col-8">
+        <div class="col-12 col-lg-8">
             <form class='mb-5' method="POST" action="{{ route('profile.update') }}">
                 @csrf
                 <h1 class="mb-3">Hồ sơ</h1>

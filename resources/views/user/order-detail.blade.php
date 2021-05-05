@@ -7,7 +7,7 @@
 <main class="bg-light">
     <div class="container-fluid py-5">
         <div class="row" style="min-height: calc(100vh - 300px)">
-            <div class="col-12 col-lg-3 mb-3">
+            <div class="col-12 col-lg-3 mb-4">
                 <div class="list-group">
                     <a href="{{ route('profile') }}" class="list-group-item list-group-item-action">
                         <i class="fas fa-user-edit"></i> Hồ sơ
