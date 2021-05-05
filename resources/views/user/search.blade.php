@@ -20,12 +20,12 @@
     <div class="container py-5">
         <div class="row">
             @if ($has_product > 0)
-                <div class="col-3">
+                <div class="col-12 col-lg-3 mb-4">
                     @include('user.components.product-filter-sidebar', [
                         'categories' => $categories
                     ])
                 </div>
-                <div class="col-9">
+                <div class="col-12 col-lg-9">
                     @if (count($products))
                         <div class="row">
                             @foreach ($products as $product)
