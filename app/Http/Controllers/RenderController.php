@@ -90,6 +90,8 @@ class RenderController extends Controller
                 $query->where('category_id', $category->id);
                 $query->orWhereIn('category_id', $category->children()->get()->pluck('id'));
             });
+
+            $hasProduct = $products->count();
         }
 
         // Filter price
