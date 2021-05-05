@@ -31,7 +31,7 @@
                             @foreach ($products as $product)
                                 @include('user.components.product', [
                                     'product' => $product,
-                                    'class' => 'col-4 mb-4'
+                                    'class' => 'col-6 col-md-4 mb-4'
                                 ])
                             @endforeach
                         </div>
