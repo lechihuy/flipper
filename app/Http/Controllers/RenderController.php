@@ -151,7 +151,7 @@ class RenderController extends Controller
             $orders->where('status', $filter['status']);
         }
         if (isset($filter['q'])) {
-            $order->where(function($query) use ($filter) {
+            $orders->where(function($query) use ($filter) {
                 $query->where('code', 'like', '%'.$filter['q'].'%');
                 $query->orWhere('fullname', 'like', '%'.$filter['q'].'%');
                 $query->orWhere('email', 'like', '%'.$filter['q'].'%');
@@ -161,7 +161,8 @@ class RenderController extends Controller
             });
             
         }
-        $orders = $orders->where('user_id', auth()->user()->id)->latest()->paginate(20)->withQueryString();
+
+        $orders = $orders->where('user_id', auth()->user()->id)->orderBy('id', 'desc')->paginate(20)->withQueryString();
 
         return view('user.order', [
             'orders' => $orders
