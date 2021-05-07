@@ -158,7 +158,7 @@ class RenderController extends Controller
             $orders->orWhere('address', 'like', '%'.$filter['q'].'%');
             $orders->orWhere('created_at', 'like', '%'.$filter['q'].'%');
         }
-        $orders = $orders->latest()->where('user_id', auth()->user()->id)->paginate(20)->withQueryString();
+        $orders->where('user_id', auth()->user()->id)->latest()->paginate(20)->withQueryString();
 
         return view('user.order', [
             'orders' => $orders
