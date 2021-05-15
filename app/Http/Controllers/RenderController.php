@@ -151,14 +151,18 @@ class RenderController extends Controller
             $orders->where('status', $filter['status']);
         }
         if (isset($filter['q'])) {
-            $orders->where('code', 'like', '%'.$filter['q'].'%');
-            $orders->orWhere('fullname', 'like', '%'.$filter['q'].'%');
-            $orders->orWhere('email', 'like', '%'.$filter['q'].'%');
-            $orders->orWhere('phone_number', 'like', '%'.$filter['q'].'%');
-            $orders->orWhere('address', 'like', '%'.$filter['q'].'%');
-            $orders->orWhere('created_at', 'like', '%'.$filter['q'].'%');
+            $orders->where(function($query) use ($filter) {
+                $query->where('code', 'like', '%'.$filter['q'].'%');
+                $query->orWhere('fullname', 'like', '%'.$filter['q'].'%');
+                $query->orWhere('email', 'like', '%'.$filter['q'].'%');
+                $query->orWhere('phone_number', 'like', '%'.$filter['q'].'%');
+                $query->orWhere('address', 'like', '%'.$filter['q'].'%');
+                $query->orWhere('created_at', 'like', '%'.$filter['q'].'%');
+            });
+            
         }
-        $orders = $orders->latest()->where('user_id', auth()->user()->id)->paginate(20)->withQueryString();
+
+        $orders = $orders->where('user_id', auth()->user()->id)->orderBy('id', 'desc')->paginate(20)->withQueryString();
 
         return view('user.order', [
             'orders' => $orders
