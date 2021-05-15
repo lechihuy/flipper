@@ -11,8 +11,8 @@
 git clone https://github.com/lechihuy/flipper.git
 cd flipper
 composer install
-php artisan key:generate
 cp .env.example .env
+php artisan key:generate
 ```
 
 - Vào phpMyadmin hoặc dùng lệnh MySQL để tạo database `flipper` với character set `utf8mb4` và collate là `utf8mb4_unicode_ci`.  
