@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\Order;
 use App\Models\OrderItem;
+use Illuminate\Support\Facades\DB;
 
 class RenderController extends Controller
 {
@@ -14,8 +15,9 @@ class RenderController extends Controller
     {
         $pinnedProduct = Product::where('is_pinned', 1)->first();
         $latestProducts = Product::latest()->take(8)->get();
-        $bestSellProductIds = OrderItem::select('product_id')->where('order_items.product_id', '=', 'products.id')
-            ->groupBy('product_id')->orderByRaw('SUM(qty) DESC')
+        $bestSellProductIds = DB::table('order_items')
+            ->join('products', 'products.id', '=', 'order_items.product_id')
+            ->select('product_id', 'qty')->groupBy('product_id', 'qty')->orderByRaw('SUM(qty) DESC')
             ->take(4)->get()->pluck('product_id')->toArray();
         $bestSellProducts = [];
 
