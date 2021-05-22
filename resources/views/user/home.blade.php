@@ -8,8 +8,7 @@
 {{-- /Jumbotron --}}
 
 {{-- Best Seller  --}}
-@dump($best_sell_products)
-{{-- <section>
+<section>
     <div class="container-fluid container-lg py-5 list-product">
         <h2 class='text-left mb-3 font-weight-light'>BÁN CHẠY</h2>
         <div class="row">
@@ -21,7 +20,7 @@
         @endforeach
     </div>
 </div>
-</section> --}}
+</section>
 
 {{-- New Release --}}
 <section class='bg-light'>
