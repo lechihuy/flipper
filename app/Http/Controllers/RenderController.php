@@ -14,13 +14,15 @@ class RenderController extends Controller
     {
         $pinnedProduct = Product::where('is_pinned', 1)->first();
         $latestProducts = Product::latest()->take(8)->get();
-        $bestSellProductIds = OrderItem::select('product_id')->groupBy('product_id')->orderByRaw('SUM(qty) DESC')->take(4)->get()->pluck('product_id')->toArray();
+        $bestSellProductIds = OrderItem::select('product_id')->where('order_items.product_id', '=', 'products.id')
+            ->groupBy('product_id')->orderByRaw('SUM(qty) DESC')
+            ->take(4)->get()->pluck('product_id')->toArray();
         $bestSellProducts = [];
 
         $bestSellProducts = array_map(function($productId) {
             return Product::find($productId);
         }, $bestSellProductIds);
-        
+
         return view('user.home', [
             'pinned_product' => $pinnedProduct,
             'latest_products' => $latestProducts,
