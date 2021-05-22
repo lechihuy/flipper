@@ -66,7 +66,7 @@ class RenderController extends Controller
     {
         $product = Product::where('slug', $slug)->firstOrFail();
         $category = $product->category;
-        $relatedProduct = Product::where('category_id', $category->id)->inRandomOrder()->take(8)->get();
+        $relatedProduct = Product::where('category_id', $category->id)->where('id', '!=', $product->id)->inRandomOrder()->take(8)->get();
         return view('user.product-detail', [
             'product' => $product,
             'category' => $category,
