@@ -20,7 +20,6 @@ class RenderController extends Controller
             ->select('product_id')->groupBy('product_id')->orderByRaw('SUM(qty) DESC')
             ->take(4)->get()->pluck('product_id')->toArray();
         $bestSellProducts = [];
-        dump($bestSellProductIds);
 
         $bestSellProducts = array_map(function($productId) {
             return Product::find($productId);
