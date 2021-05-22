@@ -20,7 +20,7 @@ class RenderController extends Controller
         $bestSellProducts = array_map(function($productId) {
             return Product::find($productId);
         }, $bestSellProductIds);
-
+        
         return view('user.home', [
             'pinned_product' => $pinnedProduct,
             'latest_products' => $latestProducts,
