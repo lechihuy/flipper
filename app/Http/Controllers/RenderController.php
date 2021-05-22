@@ -15,9 +15,10 @@ class RenderController extends Controller
     {
         $pinnedProduct = Product::where('is_pinned', 1)->first();
         $latestProducts = Product::latest()->take(8)->get();
-        $bestSellProductIds = DB::table('order_items')->distinct()
+        $bestSellProductIds = DB::table('order_items')
             ->join('products', 'products.id', '=', 'order_items.product_id')
             ->select('product_id', 'qty')->groupBy('product_id', 'qty')->orderByRaw('SUM(qty) DESC')
+            ->distinct()
             ->take(4)->get()->pluck('product_id')->toArray();
         $bestSellProducts = [];
 
